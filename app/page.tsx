@@ -30,7 +30,6 @@ export default function Home() {
             <KeyHighlights />
             <MetaverseSection />
             <Features />
-            <Speakers />
             <Schedule />
             <WhyAttend />
             <Footer />

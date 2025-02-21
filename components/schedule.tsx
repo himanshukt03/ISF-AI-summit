@@ -8,7 +8,7 @@ const scheduleData = [
     day: "Day 1",
     date: "29th May 2025",
     events: [
-      { title: "Junicorn", time: "18:00", icon: <Star className="w-5 h-5" /> },
+      { title: "Junicorn", time: "09:00", icon: <Star className="w-5 h-5" /> },
       { title: "Exclusive Dinner", time: "20:00", icon: <Star className="w-5 h-5" /> },
     ],
   },

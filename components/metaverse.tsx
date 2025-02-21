@@ -95,7 +95,7 @@ export function MetaverseSection() {
                             className="relative h-full w-full rounded-xl overflow-hidden shadow-xl"
                         >
                             <Image
-                                src="https://www.searchenginejournal.com/wp-content/uploads/2023/04/the-metaverse-what-is-it-2-64412b87eaf6c-sej-1280x720.png"
+                                src="/metaverse.webp"
                                 alt="Metaverse Experience"
                                 width={600}
                                 height={400}

@@ -8,10 +8,11 @@ import { Menu, X } from "lucide-react";
 
 interface NavbarProps {
   className?: string;
+  setIsOpen: (isOpen: boolean) => void; // Receive setIsOpen prop for parent-controlled state
 }
 
-export function Navbar({ className }: NavbarProps) {
-  const [isOpen, setIsOpen] = useState(false);
+export function Navbar({ className, setIsOpen }: NavbarProps) {
+  const [isOpen, setMenuOpen] = useState(false); // local state for mobile menu
 
   return (
     <motion.nav
@@ -22,7 +23,6 @@ export function Navbar({ className }: NavbarProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <img
@@ -35,7 +35,6 @@ export function Navbar({ className }: NavbarProps) {
             </Link>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               <Link href="#metaverse" className="text-gray-300 hover:text-white">
@@ -50,16 +49,15 @@ export function Navbar({ className }: NavbarProps) {
               <Link href="#whyattend" className="text-gray-300 hover:text-white">
                 Why Attend?
               </Link>
-              <Button variant="default" size="sm">
+              <Button variant="default" size="sm" onClick={() => setIsOpen(true)}>
                 Register Now
               </Button>
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setMenuOpen(!isOpen)}
               className="text-gray-300 p-2 hover:text-white transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -68,7 +66,6 @@ export function Navbar({ className }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           className="md:hidden bg-[#000312] border-t border-gray-700 shadow-lg"
@@ -80,26 +77,26 @@ export function Navbar({ className }: NavbarProps) {
             <Link
               href="#metaverse"
               className="block px-3 py-2 text-gray-300 hover:text-white"
-              onClick={() => setIsOpen(false)}
+              onClick={() => setMenuOpen(false)}
             >
               Metaverse Access
             </Link>
             <Link
               href="#schedule"
               className="block px-3 py-2 text-gray-300 hover:text-white"
-              onClick={() => setIsOpen(false)}
+              onClick={() => setMenuOpen(false)}
             >
               Schedule
             </Link>
             <Link
               href="#features"
               className="block px-3 py-2 text-gray-300 hover:text-white"
-              onClick={() => setIsOpen(false)}
+              onClick={() => setMenuOpen(false)}
             >
               Features
             </Link>
             <div className="px-3 py-2">
-              <Button className="w-full" variant="default" size="sm">
+              <Button className="w-full" variant="default" size="sm" onClick={() => setIsOpen(true)}>
                 Register Now
               </Button>
             </div>

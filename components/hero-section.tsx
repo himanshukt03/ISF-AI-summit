@@ -4,48 +4,23 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 
-export function HeroSection() {
+export function HeroSection({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
-      {/* Background Image with Overlay */}
-      <motion.div
+      <motion.div 
         initial={{ opacity: 0, scale: 1.1 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
         className="absolute inset-0"
       >
-        <img
-          src="https://png.pngtree.com/thumb_back/fh260/background/20230703/pngtree-blue-luxury-wall-waves-3d-rendered-abstract-architecture-background-for-presentations-image_3735894.jpg"
-          alt="Conference background"
-          className="w-full h-full object-cover"
-        />
-        {/* Gradient Overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(
-              to top,
-              rgba(0, 0, 0, 0.8) 0%,
-              rgba(0, 0, 0, 0.6) 30%,
-              rgba(0, 0, 0, 0.4) 60%,
-              rgba(0, 0, 0, 0.2) 80%,
-              rgba(0, 0, 0, 0) 100%
-            )`,
-          }}
-        />
-        {/* Gaussian Blur Effect */}
-        <div
-          className="absolute inset-0 backdrop-blur-[2px]"
-          style={{
-            background: `linear-gradient(
-              to top,
-              rgba(0, 0, 0, 0.4) 0%,
-              rgba(0, 0, 0, 0.3) 40%,
-              rgba(0, 0, 0, 0.1) 70%,
-              transparent 100%
-            )`,
-          }}
-        />
+        <div className="relative w-full h-full">
+          <img
+            src="https://png.pngtree.com/thumb_back/fh260/background/20230703/pngtree-blue-luxury-wall-waves-3d-rendered-abstract-architecture-background-for-presentations-image_3735894.jpg"
+            alt="Conference background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-[2px]" />
+        </div>
       </motion.div>
 
       <div className="container relative z-10 mx-auto">
@@ -55,7 +30,6 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-4xl mx-auto"
         >
-          {/* Event Date */}
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -68,27 +42,24 @@ export function HeroSection() {
             </span>
           </motion.div>
 
-          {/* Main Heading */}
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-tight"
           >
             ISF Global AI Summit 2025
           </motion.h1>
 
-          {/* Description */}
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-xs sm:text-sm md:text-base text-white/90 mb-6 md:mb-8"
+            className="text-xs sm:text-sm md:text-base text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto"
           >
-           Get ready to experience the future of leadership, technology, and strategy like never before! The ISF Global Austin Summit 2025 is a gateway to the future, where leaders, visionaries, and disruptors come together to shape what&apos;s next.
+            Get ready to experience the future of leadership, technology, and strategy like never before!
           </motion.p>
 
-          {/* Buttons */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -98,6 +69,7 @@ export function HeroSection() {
             <Button
               size="lg"
               className="group bg-blue-600 text-white hover:bg-blue-500"
+              onClick={() => setIsOpen(true)}
             >
               Register Now
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -106,6 +78,7 @@ export function HeroSection() {
               size="lg"
               variant="outline"
               className="text-white border-white hover:bg-white/10"
+              onClick={() => window.open('https://www.isfnetwork.org/isf-global-ai-summit/', '_blank')}
             >
               Learn More
             </Button>

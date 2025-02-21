@@ -64,7 +64,7 @@ export function HeroSection() {
           >
             <span className="px-3 py-1 text-xs md:text-sm font-semibold bg-black/20 backdrop-blur-md rounded-full inline-block mb-3 text-white">
               <Sparkles className="inline-block w-4 h-4 mr-1" />
-              May 29-30, 2025 • Dallas, USA
+              May 29-30, 2025 • Austin, USA
             </span>
           </motion.div>
 
@@ -85,7 +85,7 @@ export function HeroSection() {
             transition={{ delay: 0.4 }}
             className="text-xs sm:text-sm md:text-base text-white/90 mb-6 md:mb-8"
           >
-            Join top AI innovators, researchers, and industry leaders at the premier AI Summit. Gain exclusive insights, connect with visionary entrepreneurs, and explore the future of AI through groundbreaking discussions and networking.
+           Get ready to experience the future of leadership, technology, and strategy like never before! The ISF Global Austin Summit 2025 is a gateway to the future, where leaders, visionaries, and disruptors come together to shape what&apos;s next.
           </motion.p>
 
           {/* Buttons */}

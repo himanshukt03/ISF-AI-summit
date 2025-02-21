@@ -9,6 +9,7 @@ import { Speakers } from "@/components/speakers";
 import { Schedule } from "@/components/schedule";
 import { Features } from "@/components/features";
 import { Footer } from "@/components/footer";
+import { MetaverseSection } from "@/components/metaverse"
 
 export default function Home() {
   return (
@@ -25,9 +26,10 @@ export default function Home() {
           <div className="h-full">
             <HeroSection />
             <KeyHighlights />
+            <MetaverseSection />
+            <Features />
             <Speakers />
             <Schedule />
-            <Features />
             <Footer />
           </div>
         </div>

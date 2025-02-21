@@ -1,80 +1,76 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  Brain, 
-  Users, 
-  Lightbulb,
-  Rocket,
-  Shield,
-  Cpu
-} from "lucide-react";
+import { Sprout, Package, HeartPulse, Atom, BookOpenCheck } from "lucide-react";
 
-const features = [
+interface Feature {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
+
+const features: Feature[] = [
   {
-    icon: <Brain className="w-6 h-6" />,
-    title: "Technical Deep Dives",
-    description: "Advanced sessions on neural networks, machine learning, and more",
+    icon: <Package className="w-8 h-8 text-blue-400" />, // Matching color
+    title: "LogiTech AI",
+    description: "The Future of AI in Supply Chain & Logistics",
   },
   {
-    icon: <Users className="w-6 h-6" />,
-    title: "Networking Events",
-    description: "Connect with industry leaders and potential collaborators",
+    icon: <Sprout className="w-8 h-8 text-green-400" />, // Adjusted for contrast
+    title: "SmartSeeds",
+    description: "The Future of AgriTech & Food Security",
   },
   {
-    icon: <Lightbulb className="w-6 h-6" />,
-    title: "Innovation Showcase",
-    description: "Experience cutting-edge AI demos and applications",
+    icon: <HeartPulse className="w-8 h-8 text-red-400" />, // Healthcare red
+    title: "Vital Visions",
+    description: "Healthcare Meets AI",
   },
   {
-    icon: <Rocket className="w-6 h-6" />,
-    title: "Startup Pitch",
-    description: "Watch AI startups pitch their revolutionary ideas",
+    icon: <Atom className="w-8 h-8 text-purple-400" />, // Science/Quantum
+    title: "Quantum Fields",
+    description: "AI & Finance Risk Frontiers",
   },
   {
-    icon: <Shield className="w-6 h-6" />,
-    title: "AI Ethics Track",
-    description: "Discussions on responsible AI development",
-  },
-  {
-    icon: <Cpu className="w-6 h-6" />,
-    title: "Hands-on Labs",
-    description: "Practice with the latest AI tools and frameworks",
+    icon: <BookOpenCheck className="w-8 h-8 text-yellow-400" />, // Education emphasis
+    title: "EduScape",
+    description: "Personalized Education in the Digital Age",
   },
 ];
 
 export function Features() {
   return (
-    <section className="py-20 bg-background" id="features">
-      <div className="container px-4 mx-auto">
+    <section className="py-20 bg-[#020817] text-white" id="features">
+      <div className="container px-6 mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Summit Features</h2>
-          <p className="text-foreground/80 max-w-2xl mx-auto">
-            Discover what makes the Austin AI Summit a must-attend event
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          Key Topics and Roundtables
+          </h2>
+          <p className="text-foreground/60 max-w-2xl mx-auto">
+            Explore the groundbreaking topics shaping the future of AI.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card p-6 hover:scale-105 transition-transform duration-300"
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-stretch">
+  {features.map((feature, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="relative bg-[#1c212f] p-6 h-48 flex flex-col justify-between items-center text-center rounded-xl shadow-lg"
             >
-              <div className="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg text-primary mb-4">
+              <div className="bg-opacity-20 p-4 rounded-full" style={{ backgroundColor: feature.icon.props.className.includes('text-') ? feature.icon.props.className.replace('text-', 'bg-') : '' }}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-foreground/80">{feature.description}</p>
+              <h3 className="text-lg font-semibold text-blue-100 mt-3">{feature.title}</h3>
+              <p className="text-sm text-blue-200 mt-2">{feature.description}</p>
             </motion.div>
           ))}
         </div>
@@ -82,3 +78,4 @@ export function Features() {
     </section>
   );
 }
+

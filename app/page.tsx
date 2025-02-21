@@ -10,6 +10,7 @@ import { Schedule } from "@/components/schedule";
 import { Features } from "@/components/features";
 import { Footer } from "@/components/footer";
 import { MetaverseSection } from "@/components/metaverse"
+import { WhyAttend } from "@/components/whyattend";
 
 export default function Home() {
   return (
@@ -28,8 +29,8 @@ export default function Home() {
             <KeyHighlights />
             <MetaverseSection />
             <Features />
-            <Speakers />
             <Schedule />
+            <WhyAttend />
             <Footer />
           </div>
         </div>

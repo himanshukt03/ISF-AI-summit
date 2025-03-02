@@ -6,12 +6,15 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
+  metadataBase: new URL("https://globalaisummit.isfnetwork.org"), 
+
   title: 'ISF Global AI Summit 2025 | Future of AI & Leadership',
   description:
     'Join top AI leaders, innovators, and strategists at the ISF Global AI Summit 2025 in Austin, Texas. Explore the future of artificial intelligence, leadership, and cutting-edge technology.',
   keywords:
     'AI Summit 2025, Artificial Intelligence Conference, AI Leadership, Future of AI, AI Strategy, Tech Conference, Machine Learning, Deep Learning, ISF AI Summit',
   author: 'ISF Global',
+
   openGraph: {
     title: 'ISF Global AI Summit 2025 | Future of AI & Leadership',
     description:
@@ -20,15 +23,23 @@ export const metadata = {
     url: 'https://globalaisummit.isfnetwork.org/',
     images: [
       {
-        url: '/ai-summit-og.png', 
+        url: 'https://globalaisummit.isfnetwork.org/ai-summit-og.png', // ✅ Absolute URL
         width: 1200,
         height: 630,
         alt: 'ISF Global AI Summit 2025 Banner',
       },
     ],
   },
-};
 
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ISF Global AI Summit 2025 | Future of AI & Leadership',
+    description:
+      'Join top AI leaders, innovators, and strategists at the ISF Global AI Summit 2025 in Austin, Texas. Explore the future of artificial intelligence, leadership, and cutting-edge technology.',
+    creator: '@theISFnetwork', 
+    images: ['https://globalaisummit.isfnetwork.org/ai-summit-og.png'], 
+  },
+};
 
 export default function RootLayout({
   children,
@@ -39,9 +50,19 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://globalaisummit.isfnetwork.org/" />
+
         <link rel="icon" href="/isf-favicon.png" sizes="any" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        <meta property="og:title" content="ISF Global AI Summit 2025 | Future of AI & Leadership" />
+        <meta property="og:description" content="Join top AI leaders, innovators, and strategists at the ISF Global AI Summit 2025 in Austin, Texas. Explore the future of artificial intelligence, leadership, and cutting-edge technology." />
+        <meta property="og:url" content="https://globalaisummit.isfnetwork.org/" />
+        <meta property="og:image" content="https://globalaisummit.isfnetwork.org/ai-summit-og.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ISF Global AI Summit 2025 | Future of AI & Leadership" />
+        <meta name="twitter:description" content="Join top AI leaders, innovators, and strategists at the ISF Global AI Summit 2025 in Austin, Texas. Explore the future of artificial intelligence, leadership, and cutting-edge technology." />
+        <meta name="twitter:image" content="https://globalaisummit.isfnetwork.org/ai-summit-og.png" />
       </head>
       <body className={inter.className}>
         <ThemeProvider

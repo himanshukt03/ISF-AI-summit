@@ -23,7 +23,7 @@ export const metadata = {
     url: 'https://globalaisummit.isfnetwork.org/',
     images: [
       {
-        url: 'https://globalaisummit.isfnetwork.org/ai-summit-og.png', // ✅ Absolute URL
+        url: 'https://globalaisummit.isfnetwork.org/ai-summit-og.png', 
         width: 1200,
         height: 630,
         alt: 'ISF Global AI Summit 2025 Banner',
@@ -41,6 +41,29 @@ export const metadata = {
   },
 };
 
+// Structured data for SEO (Event Schema)
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "ISF Global AI Summit 2025",
+  "startDate": "2025-05-29",
+  "endDate": "2025-05-30",
+  "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "Austin, Texas",
+    "address": "Austin, TX, USA"
+  },
+  "image": "https://globalaisummit.isfnetwork.org/ai-summit-og.png",
+  "description": "Join top AI leaders, innovators, and strategists at the ISF Global AI Summit 2025.",
+  "organizer": {
+    "@type": "Organization",
+    "name": "ISF Network",
+    "url": "https://www.isfnetwork.org/"
+  }
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -50,19 +73,24 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://globalaisummit.isfnetwork.org/" />
-
         <link rel="icon" href="/isf-favicon.png" sizes="any" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="ISF Global AI Summit 2025 | Future of AI & Leadership" />
         <meta property="og:description" content="Join top AI leaders, innovators, and strategists at the ISF Global AI Summit 2025 in Austin, Texas. Explore the future of artificial intelligence, leadership, and cutting-edge technology." />
         <meta property="og:url" content="https://globalaisummit.isfnetwork.org/" />
         <meta property="og:image" content="https://globalaisummit.isfnetwork.org/ai-summit-og.png" />
+
+        {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ISF Global AI Summit 2025 | Future of AI & Leadership" />
         <meta name="twitter:description" content="Join top AI leaders, innovators, and strategists at the ISF Global AI Summit 2025 in Austin, Texas. Explore the future of artificial intelligence, leadership, and cutting-edge technology." />
         <meta name="twitter:image" content="https://globalaisummit.isfnetwork.org/ai-summit-og.png" />
+
+        {/* Structured Data for Event Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className={inter.className}>
         <ThemeProvider

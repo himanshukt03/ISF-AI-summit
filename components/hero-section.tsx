@@ -16,7 +16,8 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (open: boolean) => void 
         <div className="relative w-full h-full">
           <img
             src="https://png.pngtree.com/thumb_back/fh260/background/20230703/pngtree-blue-luxury-wall-waves-3d-rendered-abstract-architecture-background-for-presentations-image_3735894.jpg"
-            alt="Conference background"
+            alt="Abstract 3D rendered background with blue luxury wall waves"
+            title="ISF Global AI Summit 2025 Background"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-[2px]" />
@@ -66,19 +67,24 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (open: boolean) => void 
             transition={{ delay: 0.5 }}
             className="flex flex-row gap-2 sm:gap-4 justify-center"
           >
+            {/* Register Button */}
             <Button
               size="lg"
               className="group bg-blue-600 text-white hover:bg-blue-500"
               onClick={() => setIsOpen(true)}
+              aria-label="Register for ISF Global AI Summit 2025"
             >
               Register Now
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
+
+            {/* Learn More Button */}
             <Button
               size="lg"
               variant="outline"
               className="text-white border-white hover:bg-white/10"
               onClick={() => window.open('https://www.isfnetwork.org/isf-global-ai-summit/', '_blank')}
+              aria-label="Learn more about ISF Global AI Summit 2025"
             >
               Learn More
             </Button>

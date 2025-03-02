@@ -5,25 +5,25 @@ import { MonitorSmartphone, Users, BriefcaseBusiness, Zap } from "lucide-react";
 
 const metaverseHighlights = [
     {
-        icon: <MonitorSmartphone className="w-6 h-6" />,
-        title: "Virtual Summit Hall",
-        description: "Step into an immersive digital venue for keynotes and discussions.",
+        icon: <MonitorSmartphone className="w-6 h-6" />, 
+        title: "Virtual Summit Hall", 
+        description: "Step into an immersive digital venue for keynotes and discussions."
     },
     {
-        icon: <Users className="w-6 h-6" />,
-        title: "Networking Lounges",
-        description: "Connect with global professionals in interactive virtual spaces.",
+        icon: <Users className="w-6 h-6" />, 
+        title: "Networking Lounges", 
+        description: "Connect with global professionals in interactive virtual spaces."
     },
     {
-        icon: <BriefcaseBusiness className="w-6 h-6" />,
-        title: "Virtual AI Job Mela",
-        description: "Explore AI-driven job opportunities and speed interviews online.",
+        icon: <BriefcaseBusiness className="w-6 h-6" />, 
+        title: "Virtual AI Job Mela", 
+        description: "Explore AI-driven job opportunities and speed interviews online."
     },
     {
-        icon: <Zap className="w-6 h-6" />,
-        title: "Cutting-Edge Technology",
-        description: "Experience innovations that shape the future of AI & tech.",
-    },
+        icon: <Zap className="w-6 h-6" />, 
+        title: "Cutting-Edge Technology", 
+        description: "Experience innovations that shape the future of AI & tech."
+    }
 ];
 
 export function MetaverseSection() {
@@ -96,7 +96,8 @@ export function MetaverseSection() {
                         >
                             <Image
                                 src="/metaverse.webp"
-                                alt="Metaverse Experience"
+                                alt="Metaverse Experience with AI Summit 2025"
+                                title="Join the AI Summit 2025 in the Metaverse"
                                 width={600}
                                 height={400}
                                 className="object-cover w-full h-full"

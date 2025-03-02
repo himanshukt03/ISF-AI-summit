@@ -14,7 +14,6 @@ import { WhyAttend } from "@/components/whyattend";
 export default function Home() {
   const router = useRouter();
 
-  // Function to handle redirection to the register page
   const handleOpenRegister = () => {
     router.push("/register");
   };
@@ -24,20 +23,18 @@ export default function Home() {
       <div className="fixed inset-0 grid-background -z-10" />
 
       <div className="h-full flex flex-col">
-        {/* Pass handleOpenRegister to Navbar instead of setIsOpen */}
         <Navbar className="flex-shrink-0" setIsOpen={handleOpenRegister} />
 
         <div className="flex-1 overflow-y-auto">
-          <div className="h-full">
-            {/* Pass handleOpenRegister to RegisterWrapper instead of setIsOpen */}
+            <div className="h-full">
             <RegisterWrapper setIsOpen={handleOpenRegister} />
             <KeyHighlights />
             <MetaverseSection />
-            <Features />
+            <Features id="key-topics"/>
             <Schedule />
-            <WhyAttend />
+            <WhyAttend id="whyattend" />
             <Footer />
-          </div>
+            </div>
         </div>
       </div>
       <Analytics />

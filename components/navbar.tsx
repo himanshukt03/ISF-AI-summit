@@ -8,11 +8,20 @@ import { Menu, X } from "lucide-react";
 
 interface NavbarProps {
   className?: string;
-  setIsOpen: (isOpen: boolean) => void; // Receive setIsOpen prop for parent-controlled state
+  setIsOpen: (isOpen: boolean) => void; 
 }
 
 export function Navbar({ className, setIsOpen }: NavbarProps) {
-  const [isOpen, setMenuOpen] = useState(false); // local state for mobile menu
+  const [isOpen, setMenuOpen] = useState(false); 
+
+  // Function to handle smooth scrolling to section
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenuOpen(false); // Close mobile menu after clicking
+  };
 
   return (
     <motion.nav
@@ -37,18 +46,30 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              <Link href="#metaverse" className="text-gray-300 hover:text-white">
+              <button
+                onClick={() => scrollToSection("metaverse")}
+                className="text-gray-300 hover:text-white"
+              >
                 Metaverse Access
-              </Link>
-              <Link href="#Key Topics" className="text-gray-300 hover:text-white">
+              </button>
+              <button
+                onClick={() => scrollToSection("key-topics")}
+                className="text-gray-300 hover:text-white"
+              >
                 Key Topics
-              </Link>
-              <Link href="#schedule" className="text-gray-300 hover:text-white">
+              </button>
+              <button
+                onClick={() => scrollToSection("schedule")}
+                className="text-gray-300 hover:text-white"
+                >
                 Schedule
-              </Link>
-              <Link href="#whyattend" className="text-gray-300 hover:text-white">
+              </button>
+              <button
+                onClick={() => scrollToSection("whyattend")}
+                className="text-gray-300 hover:text-white"
+              >
                 Why Attend?
-              </Link>
+              </button>
               <Button variant="default" size="sm" onClick={() => setIsOpen(true)}>
                 Register Now
               </Button>
@@ -74,27 +95,30 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
           exit={{ opacity: 0, y: -20 }}
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link
-              href="#metaverse"
-              className="block px-3 py-2 text-gray-300 hover:text-white"
-              onClick={() => setMenuOpen(false)}
+            <button
+              onClick={() => scrollToSection("metaverse")}
+              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
             >
               Metaverse Access
-            </Link>
-            <Link
-              href="#schedule"
-              className="block px-3 py-2 text-gray-300 hover:text-white"
-              onClick={() => setMenuOpen(false)}
+            </button>
+            <button
+              onClick={() => scrollToSection("key-highlights")}
+              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
+            >
+              Key Topics
+            </button>
+            <button
+              onClick={() => scrollToSection("schedule")}
+              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
             >
               Schedule
-            </Link>
-            <Link
-              href="#features"
-              className="block px-3 py-2 text-gray-300 hover:text-white"
-              onClick={() => setMenuOpen(false)}
+            </button>
+            <button
+              onClick={() => scrollToSection("features")}
+              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
             >
               Features
-            </Link>
+            </button>
             <div className="px-3 py-2">
               <Button className="w-full" variant="default" size="sm" onClick={() => setIsOpen(true)}>
                 Register Now

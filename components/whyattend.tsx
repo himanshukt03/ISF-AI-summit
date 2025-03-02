@@ -1,8 +1,12 @@
 "use client";
 
-export function WhyAttend() {
+interface WhyAttendProps {
+  id?: string;
+}
+
+export function WhyAttend({ id }: WhyAttendProps) {
   return (
-    <section className="bg-[#000312] text-white py-16 px-6">
+    <section className="bg-[#000312] text-white py-16 px-6" id={id}>
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-4xl font-bold mb-12 text-center bg-clip-text text-white">
           Why Attend?

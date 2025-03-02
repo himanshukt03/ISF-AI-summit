@@ -2,6 +2,10 @@
 import { motion } from "framer-motion";
 import { Globe, Users, Zap, MessageCircle, Brain, BriefcaseBusiness, Trophy, Rocket } from "lucide-react";
 
+interface KeyHighlightsProps {
+  id?: string;
+}
+
 const highlights = [
   {
     icon: <MessageCircle className="w-6 h-6" />, 

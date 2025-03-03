@@ -8,11 +8,11 @@ import { Menu, X } from "lucide-react";
 
 interface NavbarProps {
   className?: string;
-  setIsOpen: (isOpen: boolean) => void; 
+  setIsOpen: (isOpen: boolean) => void;
 }
 
 export function Navbar({ className, setIsOpen }: NavbarProps) {
-  const [isOpen, setMenuOpen] = useState(false); 
+  const [isOpen, setMenuOpen] = useState(false);
 
   // Function to handle smooth scrolling to section
   const scrollToSection = (sectionId: string) => {
@@ -44,6 +44,7 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
             </Link>
           </div>
 
+          {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               <button
@@ -61,7 +62,7 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
               <button
                 onClick={() => scrollToSection("schedule")}
                 className="text-gray-300 hover:text-white"
-                >
+              >
                 Schedule
               </button>
               <button
@@ -76,6 +77,7 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
             </div>
           </div>
 
+          {/* Mobile Menu Toggle */}
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!isOpen)}
@@ -87,6 +89,7 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           className="md:hidden bg-[#000312] border-t border-gray-700 shadow-lg"
@@ -102,7 +105,7 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
               Metaverse Access
             </button>
             <button
-              onClick={() => scrollToSection("key-highlights")}
+              onClick={() => scrollToSection("key-topics")}
               className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
             >
               Key Topics
@@ -114,13 +117,21 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
               Schedule
             </button>
             <button
-              onClick={() => scrollToSection("features")}
+              onClick={() => scrollToSection("whyattend")}
               className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
             >
-              Features
+              Why Attend?
             </button>
             <div className="px-3 py-2">
-              <Button className="w-full" variant="default" size="sm" onClick={() => setIsOpen(true)}>
+              <Button
+                className="w-full"
+                variant="default"
+                size="sm"
+                onClick={() => {
+                  setIsOpen(true);
+                  setMenuOpen(false);
+                }}
+              >
                 Register Now
               </Button>
             </div>

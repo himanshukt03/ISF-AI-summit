@@ -495,8 +495,7 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
               {formContent}
             </motion.div>
             <motion.div className="mt-8 text-center text-blue-300 text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-              <p>Need assistance? Contact us at support@aisummit2025.com</p>
-              <p className="mt-1">Follow us @AI_Summit_2025 for updates</p>
+              <p className="mt-1">Follow us @theisfnetwork for updates</p>
             </motion.div>
           </motion.div>
         </div>

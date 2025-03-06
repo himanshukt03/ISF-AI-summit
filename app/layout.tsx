@@ -73,7 +73,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://globalaisummit.isfnetwork.org/" />
-        <link rel="icon" href="/isf-favicon.png" sizes="any" />
+        <link rel="icon" href="/isf-favicon.png" type="image/png" sizes="48x48" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 

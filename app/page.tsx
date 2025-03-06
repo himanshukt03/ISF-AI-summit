@@ -12,6 +12,7 @@ import { Footer } from "@/components/footer";
 import { MetaverseSection } from "@/components/metaverse";
 import { WhyAttend } from "@/components/whyattend";
 
+
 export default function Home() {
   const router = useRouter();
 
@@ -22,13 +23,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Metaverse Conference 2024 | Future of Virtual Worlds</title>
-        <meta name="description" content="Join the ultimate Metaverse Conference with industry leaders and cutting-edge technology insights." />
-        <meta property="og:title" content="Metaverse Conference 2024" />
-        <meta property="og:description" content="Explore the future of the Metaverse with top speakers, interactive sessions, and networking opportunities." />
-        <meta property="og:image" content="/metaverse-banner.jpg" />
-        <meta property="og:url" content="https://www.example.com" />
-        <link rel="canonical" href="https://www.example.com" />
+        <title>ISF Global AI Summit 2025</title>
+        <meta name="description" content="Join top AI leaders, innovators, and strategists at the ISF Global AI Summit 2025 in Austin, Texas.." />
+        <meta property="og:title" content="ISF Global AI Summit 2025" />
+        <meta property="og:description" content="Explore the future of artificial intelligence, leadership, and cutting-edge technology" />
+        <meta property="og:image" content="https://globalaisummit.isfnetwork.org/ai-summit-og.png" />
+        <meta property="og:url" content="https://globalaisummit.isfnetwork.org/" />
+        <link rel="canonical" href="https://globalaisummit.isfnetwork.org/" />
       </Head>
 
       <Analytics />

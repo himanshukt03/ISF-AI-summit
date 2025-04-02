@@ -11,6 +11,7 @@ import Select from 'react-select';
 import countryList from 'react-select-country-list';
 import { defaultFormData, registrationTypes, arrivalLocations } from "@/constants/registrationForm";
 import { FormData, FormErrors, CountryOption } from "@/types/registrationForm";
+import { sendConfirmationEmail } from "@/utils/sendEmail";
 
 export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen }: {
   isPopup?: boolean;
@@ -72,37 +73,46 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form before submission
     if (!validateForm()) return;
-
+  
     setIsSubmitting(true);
     setSubmitState("idle");
-
+  
     try {
       console.log("Submitting form data:", formData);
-      const response = await fetch('/api/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
+  
       const data = await response.json();
-
+  
       if (!response.ok) {
+        // Handle specific error cases
         if (response.status === 409) {
           setSubmitState("duplicate");
-          setErrors({ email: data.message });
+          setErrors({ email: data.message || "This email is already registered" });
         } else if (response.status === 400 && data.errors) {
+          // Handle validation errors from server
           const newErrors: FormErrors = {};
           data.errors.forEach((err: { field: string; message: string }) => {
-            newErrors[err.field] = err.message;
+            newErrors[err.field as keyof FormErrors] = err.message;
           });
           setErrors(newErrors);
           setSubmitState("error");
         } else {
+          // Generic error case
           throw new Error(data.message || "Registration failed");
         }
       } else {
+        // Success case
         setSubmitState("success");
+        
+        // Reset form after delay
         setTimeout(() => {
           if (isPopup) {
             resetForm();
@@ -112,13 +122,17 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
         }, 2000);
       }
     } catch (error) {
-      console.error('Registration error:', error);
+      console.error("Registration error:", error);
       setSubmitState("error");
-      setErrors({ form: error instanceof Error ? error.message : "An unexpected error occurred" });
+      setErrors({
+        form: error instanceof Error 
+          ? error.message 
+          : "An unexpected error occurred during registration"
+      });
     } finally {
       setIsSubmitting(false);
     }
-  };
+  };  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -385,7 +399,7 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
             </div>
             <div>
               <label htmlFor="departureDate" className="block text-sm font-medium mb-1.5 text-white">
-                Departure Date from fromSan Marcos, Austin<span className="text-red-400">*</span>
+                Departure Date from from San Marcos, Austin<span className="text-red-400">*</span>
               </label>
               <input
                 type="date"

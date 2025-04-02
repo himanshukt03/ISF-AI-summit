@@ -17,8 +17,7 @@ const mg = mailgun.client({
   url: "https://api.mailgun.net",
 });
 
-// **Use the sandbox domain for testing**
-const domain = "sandboxdfd406283ad04498a7e19b158e68d5c9.mailgun.org";
+const domain = "globalaisummit.isfnetwork.org";
 
 export const sendConfirmationEmail = async (email: string, name: string): Promise<EmailResponse> => {
   try {

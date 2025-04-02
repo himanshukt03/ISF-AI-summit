@@ -11,7 +11,6 @@ import Select from 'react-select';
 import countryList from 'react-select-country-list';
 import { defaultFormData, registrationTypes, arrivalLocations } from "@/constants/registrationForm";
 import { FormData, FormErrors, CountryOption } from "@/types/registrationForm";
-import { sendConfirmationEmail } from "@/utils/sendEmail";
 
 export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen }: {
   isPopup?: boolean;
@@ -74,7 +73,6 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate form before submission
     if (!validateForm()) return;
   
     setIsSubmitting(true);
@@ -105,14 +103,10 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
           setErrors(newErrors);
           setSubmitState("error");
         } else {
-          // Generic error case
           throw new Error(data.message || "Registration failed");
         }
       } else {
-        // Success case
         setSubmitState("success");
-        
-        // Reset form after delay
         setTimeout(() => {
           if (isPopup) {
             resetForm();

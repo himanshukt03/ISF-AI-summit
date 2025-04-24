@@ -12,16 +12,16 @@ export async function POST(req: Request) {
       );
     }
 
-    const response = await sendConfirmationEmail(to, name);
+    await sendConfirmationEmail(to, name);
     
     return NextResponse.json(
-      { message: "Confirmation email sent successfully", response },
+      { message: "Confirmation email sent successfully" },
       { status: 200 }
     );
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error sending email:", error);
     return NextResponse.json(
-      { error: "Failed to send email" },
+      { error: "Failed to send email", details: error.message },
       { status: 500 }
     );
   }

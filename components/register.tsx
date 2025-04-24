@@ -29,35 +29,48 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
     const newErrors: FormErrors = {};
     const requiredFields: (keyof FormData)[] = [
       'fullName', 'email', 'mobile', 'organization', 'designation',
-      'city', 'country', 'registrationType', 'arrivalFrom', 'arrivalDate', 'departureDate'
+      'city', 'country', 'registrationType'
     ];
-
+  
     requiredFields.forEach(field => {
       if (!formData[field] || !formData[field].trim()) {
         newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1).replace(/([A-Z])/g, ' $1').trim()} is required`;
       }
     });
-
+  
     if (formData.email && !/^\S+@\S+\.\S+$/.test(formData.email)) {
       newErrors.email = "Invalid email format";
     }
-
+  
     if (formData.arrivalFrom === "other" && (!formData.otherArrivalLocation || !formData.otherArrivalLocation.trim())) {
       newErrors.otherArrivalLocation = "Please specify your arrival location";
     }
-
-    const arrivalDate = new Date(formData.arrivalDate);
-    const departureDate = new Date(formData.departureDate);
-    if (formData.arrivalDate && isNaN(arrivalDate.getTime())) {
-      newErrors.arrivalDate = "Invalid arrival date";
+  
+    // Only validate dates if they are provided
+    if (formData.arrivalDate) {
+      const arrivalDate = new Date(formData.arrivalDate);
+      if (isNaN(arrivalDate.getTime())) {
+        newErrors.arrivalDate = "Invalid arrival date";
+      }
     }
-    if (formData.departureDate && isNaN(departureDate.getTime())) {
-      newErrors.departureDate = "Invalid departure date";
+  
+    if (formData.departureDate) {
+      const departureDate = new Date(formData.departureDate);
+      if (isNaN(departureDate.getTime())) {
+        newErrors.departureDate = "Invalid departure date";
+      }
     }
-    if (!newErrors.arrivalDate && !newErrors.departureDate && departureDate < arrivalDate) {
-      newErrors.departureDate = "Departure date must be on or after arrival date";
+  
+    // Only compare dates if both are provided
+    if (formData.arrivalDate && formData.departureDate) {
+      const arrivalDate = new Date(formData.arrivalDate);
+      const departureDate = new Date(formData.departureDate);
+      
+      if (!isNaN(arrivalDate.getTime()) && !isNaN(departureDate.getTime()) && departureDate < arrivalDate) {
+        newErrors.departureDate = "Departure date must be on or after arrival date";
+      }
     }
-
+  
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -339,7 +352,7 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
           <h3 className="text-lg font-medium text-blue-400 mb-4">Travel Details</h3>
           <div className="mb-4">
             <label className="block text-sm font-medium mb-2 text-white">
-              Arrival From <span className="text-red-400">*</span>
+              Arrival From
             </label>
             <div className="space-y-2">
               {arrivalLocations.map((location) => (
@@ -352,7 +365,6 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
                     checked={formData.arrivalFrom === location.value}
                     onChange={handleArrivalFromChange}
                     className="mr-2 h-4 w-4 text-blue-500 focus:ring-blue-400"
-                    required
                   />
                   <label htmlFor={`arrival-${location.value}`} className="text-white">{location.label}</label>
                 </div>
@@ -369,7 +381,6 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
                   onChange={handleChange}
                   placeholder="Please specify"
                   className={inputFieldClass + (errors.otherArrivalLocation ? ' border-red-500' : '')}
-                  required
                 />
                 {errors.otherArrivalLocation && <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-red-400 text-sm mt-1">{errors.otherArrivalLocation}</motion.p>}
               </div>
@@ -378,7 +389,7 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
           <div className={`grid grid-cols-1 ${isPopup ? '' : 'md:grid-cols-2'} gap-4`}>
             <div>
               <label htmlFor="arrivalDate" className="block text-sm font-medium mb-1.5 text-white">
-                Arrival Date  in San Marcos, Austin<span className="text-red-400">*</span>
+                Arrival Date in Austin (Optional)
               </label>
               <input
                 type="date"
@@ -387,13 +398,12 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
                 value={formData.arrivalDate}
                 onChange={handleChange}
                 className={inputFieldClass + (errors.arrivalDate ? ' border-red-500' : '')}
-                required
               />
               {errors.arrivalDate && <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-red-400 text-sm mt-1">{errors.arrivalDate}</motion.p>}
             </div>
             <div>
               <label htmlFor="departureDate" className="block text-sm font-medium mb-1.5 text-white">
-                Departure Date from from San Marcos, Austin<span className="text-red-400">*</span>
+                Departure Date from Austin (Optional)
               </label>
               <input
                 type="date"
@@ -402,7 +412,6 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
                 value={formData.departureDate}
                 onChange={handleChange}
                 className={inputFieldClass + (errors.departureDate ? ' border-red-500' : '')}
-                required
               />
               {errors.departureDate && <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-red-400 text-sm mt-1">{errors.departureDate}</motion.p>}
             </div>

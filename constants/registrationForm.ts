@@ -26,7 +26,8 @@ export const defaultFormData = {
     "Special Invitee / VIP",
     "Crew Member",
     "Junicorn (Full Tour/Expedition)",
-    "Junicorn (Conference + Exhibition only)"
+    "Junicorn (Conference + Exhibition only)",
+    "Metaverse Only"
   ];
   
   export const arrivalLocations = [

@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
-import { sendConfirmationEmail } from "@/utils/sendEmail";
+// import { sendConfirmationEmail } from "@/utils/sendEmail";
 
 // MongoDB connection setup
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -19,8 +19,8 @@ async function connectToDB() {
   try {
     await mongoose.connect(MONGODB_URI as string, {
       dbName: "ISF-summit-2025",
-      serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
-      socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
+      serverSelectionTimeoutMS: 5000,
+      socketTimeoutMS: 45000,
     });
     isConnected = true;
     console.log("MongoDB Connected Successfully");
@@ -43,7 +43,8 @@ const registrationTypes = [
   "Special Invitee / VIP",
   "Crew Member",
   "Junicorn (Full Tour/Expedition)",
-  "Junicorn (Conference + Exhibition only)"
+  "Junicorn (Conference + Exhibition only)",
+  "Metaverse Only"
 ];
 
 // Schema
@@ -68,25 +69,26 @@ const registrationSchema = new mongoose.Schema(
       required: true,
       enum: registrationTypes,
     },
-    arrivalFrom: { type: String, required: true, trim: true },
+    arrivalFrom: { type: String, trim: true }, 
     otherArrivalLocation: { 
       type: String, 
       trim: true,
       required: function() { return this.arrivalFrom === "other"; }
     },
-    arrivalDate: { type: Date, required: true },
+    arrivalDate: { type: Date },
     departureDate: { 
-      type: Date, 
-      required: true,
+      type: Date,
       validate: {
         validator: function(this: any, v: Date) {
+          // Only validate if both dates exist
+          if (!this.arrivalDate || !v) return true;
           return v >= this.arrivalDate;
         },
         message: "Departure date must be on or after arrival date"
       }
     },
     specialRequests: { type: String, default: "", trim: true },
-    emailSent: { type: Boolean, default: false } // Track email status
+    // emailSent: { type: Boolean, default: false }
   },
   { 
     timestamps: true,
@@ -119,27 +121,36 @@ export async function POST(req: Request) {
 
     const formData = await req.json();
     
-    // Validate and convert dates
-    const arrivalDate = new Date(formData.arrivalDate);
-    const departureDate = new Date(formData.departureDate);
+    // Only parse dates if they exist and are not empty strings
+    const arrivalDate = formData.arrivalDate ? new Date(formData.arrivalDate) : undefined;
+    const departureDate = formData.departureDate ? new Date(formData.departureDate) : undefined;
 
-    if (!isValidDate(arrivalDate)) {
+    // Validate dates only if they were provided
+    if (arrivalDate && !isValidDate(arrivalDate)) {
       return NextResponse.json(
         { message: "Invalid arrival date format" }, 
         { status: 400 }
       );
     }
-    if (!isValidDate(departureDate)) {
+    if (departureDate && !isValidDate(departureDate)) {
       return NextResponse.json(
         { message: "Invalid departure date format" }, 
         { status: 400 }
       );
     }
 
+    // Only validate date order if both dates were provided
+    if (arrivalDate && departureDate && departureDate < arrivalDate) {
+      return NextResponse.json(
+        { message: "Departure date must be on or after arrival date" }, 
+        { status: 400 }
+      );
+    }
+
     const data = {
       ...formData,
-      arrivalDate,
-      departureDate,
+      arrivalDate: arrivalDate || undefined,
+      departureDate: departureDate || undefined,
     };
 
     // Check for existing registration
@@ -152,11 +163,10 @@ export async function POST(req: Request) {
       );
     }
 
-    // Validate required fields
+    // Validate required fields (excluding arrivalFrom and dates)
     const requiredFields = [
       'fullName', 'email', 'mobile', 'organization', 'designation',
-      'city', 'country', 'registrationType', 'arrivalFrom',
-      'arrivalDate', 'departureDate'
+      'city', 'country', 'registrationType'
     ];
 
     for (const field of requiredFields) {
@@ -169,6 +179,7 @@ export async function POST(req: Request) {
       }
     }
 
+    // Validate otherArrivalLocation only if arrivalFrom is "other"
     if (data.arrivalFrom === "other" && (!data.otherArrivalLocation || !data.otherArrivalLocation.trim())) {
       return NextResponse.json(
         { message: "Please specify other arrival location" }, 
@@ -182,10 +193,10 @@ export async function POST(req: Request) {
 
     console.log("Registration saved successfully. ID:", newRegistration._id);
 
-    // Send confirmation email asynchronously (don't await)
+    // Send confirmation email asynchronously
+    /*
     sendConfirmationEmail(data.email, data.fullName)
       .then(async () => {
-        // Update email status in DB if sent successfully
         await Registration.updateOne(
           { _id: newRegistration._id },
           { $set: { emailSent: true } }
@@ -195,6 +206,7 @@ export async function POST(req: Request) {
       .catch(error => {
         console.error("Failed to send confirmation email:", error);
       });
+    */
 
     return NextResponse.json(
       { 

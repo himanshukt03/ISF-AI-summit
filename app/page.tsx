@@ -11,6 +11,7 @@ import { Features } from "@/components/features";
 import { Footer } from "@/components/footer";
 import { MetaverseSection } from "@/components/metaverse";
 import { WhyAttend } from "@/components/whyattend";
+import HotelStay from "@/components/HotelStay"; 
 
 
 export default function Home() {
@@ -46,7 +47,8 @@ export default function Home() {
               <KeyHighlights />
               <MetaverseSection />
               <Features id="key-topics" />
-              <Schedule />
+              <Schedule id="schedule" />
+              <HotelStay />
               <WhyAttend id="whyattend" />
               <Footer />
             </div>

@@ -12,69 +12,66 @@ interface ScheduleEvent {
 interface ScheduleDay {
   day: string;
   date: string;
-  color: string;
   title: string;
   events: ScheduleEvent[];
 }
 
 const scheduleData: ScheduleDay[] = [
-  // {
-  //   day: "Day 1",
-  //   date: "29th May 2025",
-  //   color: "pink",
-  //   title: "Junicorn Summit",
-  //   events: [
-  //     { 
-  //       time: "08:30 - 9:30", 
-  //       title: "Arrival & Registration",
-  //       icon: <Users className="w-5 h-5 text-pink-600" />
-  //     },
-  //     { 
-  //       time: "09:30 - 11:00", 
-  //       title: "Inaugural Session",
-  //       icon: <Lightbulb className="w-5 h-5 text-pink-600" />
-  //     },
-  //     { 
-  //       time: "11:00 - 11:30", 
-  //       title: "Networking Break - Coffee/Tea",
-  //       icon: <Coffee className="w-5 h-5 text-pink-600" />
-  //     },
-  //     { 
-  //       time: "11:30 - 12:30", 
-  //       title: "Junicorn Pitch Sessions",
-  //       icon: <PieChart className="w-5 h-5 text-pink-600" />
-  //     },
-  //     { 
-  //       time: "12:30 - 13:30", 
-  //       title: "Networking Break - Lunch",
-  //       icon: <Utensils className="w-5 h-5 text-pink-600" />
-  //     },
-  //     { 
-  //       time: "13:30 - 14:30", 
-  //       title: "Junicorn Pitch Sessions",
-  //       icon: <PieChart className="w-5 h-5 text-pink-600" />
-  //     },
-  //     { 
-  //       time: "14:30 - 15:30", 
-  //       title: "Junicorn Pitch Sessions",
-  //       icon: <PieChart className="w-5 h-5 text-pink-600" />
-  //     },
-  //     { 
-  //       time: "15:30 - 16:30", 
-  //       title: "Junicorn Pitch Sessions",
-  //       icon: <PieChart className="w-5 h-5 text-pink-600" />
-  //     },
-  //     { 
-  //       time: "16:30 - 17:15", 
-  //       title: "Awards Ceremony",
-  //       icon: <Award className="w-5 h-5 text-pink-600" />
-  //     }
-  //   ]
-  // },
   {
     day: "Day 1",
+    date: "29th May 2025",
+    title: "Junicorn Summit",
+    events: [
+      { 
+        time: "08:30 - 9:30", 
+        title: "Arrival & Registration",
+        icon: <Users className="w-5 h-5 text-blue-600" />
+      },
+      { 
+        time: "09:30 - 11:00", 
+        title: "Inaugural Session",
+        icon: <Lightbulb className="w-5 h-5 text-blue-600" />
+      },
+      { 
+        time: "11:00 - 11:30", 
+        title: "Networking Break - Coffee/Tea",
+        icon: <Coffee className="w-5 h-5 text-blue-600" />
+      },
+      { 
+        time: "11:30 - 12:30", 
+        title: "Junicorn Pitch Sessions",
+        icon: <PieChart className="w-5 h-5 text-blue-600" />
+      },
+      { 
+        time: "12:30 - 13:30", 
+        title: "Networking Break - Lunch",
+        icon: <Utensils className="w-5 h-5 text-blue-600" />
+      },
+      { 
+        time: "13:30 - 14:30", 
+        title: "Junicorn Pitch Sessions",
+        icon: <PieChart className="w-5 h-5 text-blue-600" />
+      },
+      { 
+        time: "14:30 - 15:30", 
+        title: "Junicorn Pitch Sessions",
+        icon: <PieChart className="w-5 h-5 text-blue-600" />
+      },
+      { 
+        time: "15:30 - 16:30", 
+        title: "Junicorn Pitch Sessions",
+        icon: <PieChart className="w-5 h-5 text-blue-600" />
+      },
+      { 
+        time: "16:30 - 17:15", 
+        title: "Awards Ceremony",
+        icon: <Award className="w-5 h-5 text-blue-600" />
+      }
+    ]
+  },
+  {
+    day: "Day 2",
     date: "30th May 2025",
-    color: "blue",
     title: "Global AI Summit",
     events: [
       { 
@@ -136,136 +133,118 @@ const scheduleData: ScheduleDay[] = [
   }
 ];
 
-// Mobile Timeline Component
 const MobileTimeline = ({ day }: { day: ScheduleDay }) => {
-  const [activeEvent, setActiveEvent] = useState(0);
-
   return (
-    <div className="relative">
-      {/* Day Header */}
-      <div className={`flex items-center gap-3 mb-6 ${day.color === "pink" ? "text-pink-600" : "text-blue-600"}`}>
+    <div className="relative px-4">
+      {/* Header */}
+      <div className="flex items-center gap-3 mb-6 text-blue-600">
         <Calendar className="w-6 h-6" />
         <div>
           <h3 className="text-xl font-bold">{day.title}</h3>
-          <p className="text-foreground/60 text-sm">{day.date}</p>
+          <p className="text-muted-foreground text-sm">{day.date}</p>
         </div>
       </div>
 
       {/* Timeline */}
       <div className="relative">
-        <div className={`absolute left-4 top-0 bottom-0 w-0.5 ${day.color === "pink" ? "bg-pink-200" : "bg-blue-200"}`}></div>
+        {/* Vertical line */}
+        <div className="absolute left-6 top-2 bottom-6 w-[2px] bg-blue-200" />
         
         {day.events.map((event, index) => (
-          <motion.div 
-            key={index}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className={`relative pl-12 pb-8 ${activeEvent === index ? "opacity-100" : "opacity-60"}`}
-            onClick={() => setActiveEvent(index)}
-          >
+          <div key={index} className="relative pb-6 pl-10">
             {/* Timeline dot */}
-            <div 
-              className={`absolute left-2 top-2 w-6 h-6 rounded-full flex items-center justify-center ${
-                activeEvent === index 
-                  ? (day.color === "pink" ? "bg-pink-600" : "bg-blue-600") 
-                  : "bg-foreground/10"
-              }`}
-            >
-              <div className={`w-2 h-2 rounded-full ${
-                activeEvent === index 
-                  ? "bg-white" 
-                  : (day.color === "pink" ? "bg-pink-600" : "bg-blue-600")
-              }`}></div>
+            <div className="absolute left-5 top-2 h-3 w-3 rounded-full bg-blue-600">
+              <div className="absolute inset-0 animate-ping rounded-full opacity-40 bg-current" />
             </div>
-            
-            {/* Time */}
-            <div className="text-sm font-medium mb-1 flex items-center">
-              <Clock className={`w-4 h-4 mr-1 ${day.color === "pink" ? "text-pink-600" : "text-blue-600"}`} />
-              <span>{event.time}</span>
-            </div>
-            
-            {/* Event details */}
-            <div className={`p-3 rounded-lg ${
-              activeEvent === index 
-                ? (day.color === "pink" ? "bg-pink-50" : "bg-blue-50") 
-                : "bg-foreground/5"
-            }`}>
-              <div className="flex items-center mb-1">
-                {event.icon}
-                <h4 className="ml-2 font-medium">{event.title}</h4>
+
+            {/* Event card */}
+            <div className="p-4 rounded-xl bg-background border shadow-sm">
+              {/* Time */}
+              <div className="flex items-center gap-1.5 text-sm text-muted-foreground mb-2">
+                <Clock className="w-4 h-4" />
+                <span>{event.time}</span>
+              </div>
+              
+              {/* Content */}
+              <div className="flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-blue-100">
+                  {event.icon}
+                </div>
+                <h4 className="font-medium flex-1">{event.title}</h4>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
   );
 };
 
-// Desktop Schedule Component
-const DesktopSchedule = ({ day }: { day: ScheduleDay }) => {
-  return (
-    <div className="glass-card p-6 rounded-xl border border-border/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
-      <div className="flex flex-row items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <Calendar className={`w-6 h-6 ${day.color === "pink" ? "text-pink-600" : "text-blue-600"}`} />
-          <div>
-            <h3 className={`text-2xl font-bold ${day.color === "pink" ? "text-pink-600" : "text-blue-600"}`}>
-              {day.title}
-            </h3>
-            <p className="text-foreground/60 text-sm">{day.date}</p>
-          </div>
-        </div>
-        <span className={`inline-block px-4 py-1 rounded-full text-sm font-medium ${
-          day.color === "pink" ? "bg-pink-100 text-pink-700" : "bg-blue-100 text-blue-700"
-        }`}>
-          {day.day}
-        </span>
-      </div>
-      
-      <div className="space-y-3">
-        {day.events.map((event, eventIndex) => (
-          <motion.div
-            key={eventIndex}
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: eventIndex * 0.05 }}
-            className="flex flex-row items-center justify-between p-4 rounded-lg bg-foreground/5 hover:bg-foreground/10 transition-colors duration-200"
-          >
-            <div className="flex items-center space-x-4">
-              {event.icon}
-              <span className="text-foreground/80 font-medium">{event.title}</span>
-            </div>
-            <div className="flex items-center gap-2 ml-4">
-              <Clock className={`w-4 h-4 ${day.color === "pink" ? "text-pink-600" : "text-blue-600"}`} />
-              <span className="text-sm text-foreground/60">{event.time}</span>
-            </div>
-          </motion.div>
-        ))}
+const DesktopSchedule = ({ day }: { day: ScheduleDay }) => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    className="glass-card p-6 rounded-xl border border-border/50 backdrop-blur-sm shadow-lg"
+  >
+    <div className="flex items-center gap-3 mb-6">
+      <Calendar className="w-6 h-6 text-blue-600" />
+      <div>
+        <h3 className="text-2xl font-bold text-blue-600">
+          {day.title}
+        </h3>
+        <p className="text-foreground/60 text-sm">{day.date}</p>
       </div>
     </div>
-  );
-};
+
+    <div className="space-y-3">
+      {day.events.map((event, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ scale: 1.02 }}
+          className="flex items-center justify-between p-4 rounded-lg bg-foreground/5 hover:bg-foreground/10 transition-colors"
+        >
+          <div className="flex items-center gap-4">
+            {event.icon}
+            <span className="font-medium">{event.title}</span>
+          </div>
+          <div className="flex items-center gap-2 text-foreground/60">
+            <Clock className="w-4 h-4" />
+            <span className="text-sm">{event.time}</span>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </motion.div>
+);
+
+const TabButton = ({ day, isActive, onClick }: { 
+  day: ScheduleDay, 
+  isActive: boolean, 
+  onClick: () => void
+}) => (
+  <button
+    onClick={onClick}
+    className={`px-6 py-3 text-sm font-medium rounded-lg transition-colors ${
+      isActive 
+        ? "bg-blue-100 text-blue-700"
+        : "bg-foreground/5 text-foreground/60 hover:bg-foreground/10"
+    }`}
+    role="tab"
+    aria-selected={isActive}
+  >
+    {day.day}
+  </button>
+);
 
 export function Schedule() {
+  const [activeTab, setActiveTab] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check if window is available (client-side)
     if (typeof window !== "undefined") {
-      const checkMobile = () => {
-        setIsMobile(window.innerWidth < 768);
-      };
-      
-      // Initial check
+      const checkMobile = () => setIsMobile(window.innerWidth < 768);
       checkMobile();
-      
-      // Add event listener
       window.addEventListener("resize", checkMobile);
-      
-      // Cleanup
       return () => window.removeEventListener("resize", checkMobile);
     }
   }, []);
@@ -276,8 +255,6 @@ export function Schedule() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Event Schedule</h2>
@@ -286,38 +263,23 @@ export function Schedule() {
           </p>
         </motion.div>
 
-        {/* Desktop version */}
-        <div className={`${isMobile ? "hidden" : "block"} max-w-5xl mx-auto`}>
-          <div className="space-y-12">
-            {scheduleData.map((day, dayIndex) => (
-              <motion.div
-                key={dayIndex}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: dayIndex * 0.1 }}
-              >
-                <DesktopSchedule day={day} />
-              </motion.div>
-            ))}
-          </div>
+        <div className="flex gap-2 mb-8 md:justify-center">
+          {scheduleData.map((day, index) => (
+            <TabButton
+              key={index}
+              day={day}
+              isActive={activeTab === index}
+              onClick={() => setActiveTab(index)}
+            />
+          ))}
         </div>
 
-        {/* Mobile version */}
-        <div className={`${isMobile ? "block" : "hidden"}`}>
-          <div className="space-y-16">
-            {scheduleData.map((day, dayIndex) => (
-              <motion.div
-                key={dayIndex}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: dayIndex * 0.1 }}
-              >
-                <MobileTimeline day={day} />
-              </motion.div>
-            ))}
-          </div>
+        <div className="max-w-5xl mx-auto">
+          {isMobile ? (
+            <MobileTimeline day={scheduleData[activeTab]} />
+          ) : (
+            <DesktopSchedule day={scheduleData[activeTab]} />
+          )}
         </div>
       </div>
     </section>

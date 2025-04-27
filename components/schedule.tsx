@@ -15,6 +15,10 @@ import {
 } from "lucide-react"
 import { useState, useEffect } from "react"
 
+interface ScheduleProps {
+  id?: string
+}
+
 interface ScheduleEvent {
   time: string
   title: string
@@ -250,7 +254,7 @@ const TabButton = ({
   </button>
 )
 
-export function Schedule() {
+export function Schedule({ id }: ScheduleProps) {
   const [activeTab, setActiveTab] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -264,7 +268,7 @@ export function Schedule() {
   }, [])
 
   return (
-    <section className="py-16">
+    <section id={id} className="py-16">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Event Schedule</h2>

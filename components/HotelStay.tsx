@@ -93,12 +93,12 @@ export default function HotelStay() {
             Nearby Accommodations
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400">
-            Convenient hotels located within 0.5 miles of the summit venue
+            Convenient hotels located within 3 miles of the summit venue
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {hotelData.map((hotel) => (
-            <div key={hotel.id} className="bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700 flex flex-col h-full">
+            <div key={hotel.id} className="bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-700 flex flex-col h-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg md:hover:scale-105 md:hover:shadow-lg">
               <img
                 src={hotel.image}
                 alt={hotel.name}

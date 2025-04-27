@@ -98,7 +98,6 @@ const registrationSchema = new mongoose.Schema(
 );
 
 // Add indexes for faster queries
-registrationSchema.index({ email: 1 });
 registrationSchema.index({ registrationType: 1 });
 registrationSchema.index({ createdAt: 1 });
 

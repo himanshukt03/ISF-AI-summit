@@ -4,7 +4,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
-  swcMinify: false,
+  // swcMinify: false,
   webpack: (config, { isServer }) => {
     // Disable SWC completely
     config.module.rules.forEach((rule) => {

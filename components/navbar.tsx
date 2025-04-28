@@ -48,11 +48,12 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               <button
-                onClick={() => scrollToSection("metaverse")}
-                className="text-gray-300 hover:text-white"
+                onClick={() => window.open("https://www.playubu.ai/isf", "_blank")}
+                className="text-gray-300 hover:text-white transition-colors duration-300"
               >
                 Metaverse Access
               </button>
+
               <button
                 onClick={() => scrollToSection("key-topics")}
                 className="text-gray-300 hover:text-white"

@@ -70,18 +70,33 @@ export function MetaverseSection() {
                                 </motion.li>
                             ))}
                         </ul>
-                        <motion.p
+                        <motion.button
+                            type="button"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
-                            className="text-lg font-medium text-primary"
-                        >
-                            Don't just attend—immerse yourself in the future!
-                        </motion.p>
-                    </motion.div>
+                            className="inline-flex items-center justify-center gap-2 px-4 py-2 text-base font-semibold text-black bg-primary border-2 border-primary rounded-md hover:bg-primary/90 transition-all duration-300 ease-in-out"
+                            onClick={() => window.open("https://www.playubu.ai/isf", "_blank")}
+                            >
+                            <span>Check it out for yourself!</span>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-4 w-4 transform transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                            >
+                                <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M13.828 10.172a4 4 0 010 5.656l-3.536 3.536a4 4 0 01-5.656-5.656l1.414-1.414M10.172 13.828a4 4 0 010-5.656l3.536-3.536a4 4 0 015.656 5.656l-1.414 1.414"
+                                />
+                            </svg>
+                            </motion.button>
+                        </motion.div>
 
-                    {/* Image */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}

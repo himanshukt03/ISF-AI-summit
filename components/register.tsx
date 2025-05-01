@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check, AlertTriangle, ArrowLeft, X } from "lucide-react";
+import { Check, AlertTriangle, ArrowLeft, X, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
@@ -432,6 +432,19 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
               } border focus:ring-1 focus:border-transparent transition-all`}
               placeholder="Enter any special requirements or questions here..."
             />
+          </div>
+
+          {/* Virtual Attendance Option */}
+          <div className="mt-6 p-0">
+            <h4 className="text-blue-400 font-medium text-lg mb-2">Can't be in Austin?</h4>
+            <a
+              href="https://www.playubu.ai/isf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white mb-3 inline-block hover:underline hover:text-blue-400 transition-colors"
+            >
+              Attend virtually and join us in the Metaverse →
+            </a>
           </div>
         </div>
       </div>

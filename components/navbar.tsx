@@ -61,16 +61,28 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
                 Key Topics
               </button>
               <button
+                onClick={() => scrollToSection("speakers")}
+                className="text-gray-300 hover:text-white"
+              >
+                Speakers
+              </button>
+              <button
                 onClick={() => scrollToSection("schedule")}
                 className="text-gray-300 hover:text-white"
               >
                 Schedule
               </button>
               <button
-                onClick={() => scrollToSection("whyattend")}
+                onClick={() => scrollToSection("venue")}
                 className="text-gray-300 hover:text-white"
               >
-                Why Attend?
+                Location
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
+                className="text-gray-300 hover:text-white"
+              >
+                About Us
               </button>
               <Button variant="default" size="sm" onClick={() => setIsOpen(true)}>
                 Register Now

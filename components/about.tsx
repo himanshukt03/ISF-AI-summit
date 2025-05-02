@@ -4,7 +4,19 @@ import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const aboutCards = [
+interface AboutCard {
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+  buttonText: string;
+}
+
+interface AboutSectionProps {
+  id?: string;
+}
+
+const aboutCards: AboutCard[] = [
   {
     title: "International Startup Foundation (ISF)",
     description: "The International Startup Foundation (ISF) is a not-for-profit organization dedicated to fostering innovation and entrepreneurship across key sectors such as Capital Investments, Health, GCC, AI, Fintech, Agriculture, Rural Development, Women, and Youth. Aligned with the Bharat 2047 vision, ISF works to build impactful ecosystems that drive economic growth and sustainable development.",
@@ -21,9 +33,9 @@ const aboutCards = [
   }
 ];
 
-export function AboutSection() {
+export function AboutSection({ id }: AboutSectionProps) {
   return (
-    <section className="py-20 bg-background" id="about">
+    <section id={id || "about"} className="py-20 bg-background">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}

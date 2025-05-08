@@ -62,6 +62,15 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void
             Join us for two power-packed days of action, insight, and inspiration with the world's top minds in AI, innovation, and entrepreneurship.
           </motion.p>
 
+          {/* <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="text-xs sm:text-sm md:text-base text-white/90 mb-6 md:mb-8 max-w-2xl"
+          >
+            Join us for two power-packed days of action, insight, and inspiration with the world's top minds in AI, innovation, and entrepreneurship.
+          </motion.p> */}
+
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

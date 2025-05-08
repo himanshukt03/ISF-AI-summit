@@ -15,19 +15,9 @@ export const defaultFormData = {
   };
   
   export const registrationTypes = [
-    "One-Day Conference Delegate (Junicorn Summit)",
-    "One-Day Conference Delegate (AI Summit)",
-    "Two-Day Conference Delegate (Junicorn + AI Summit)",
-    "Speaker",
-    "Mentor",
-    "Sponsor",
-    "Exhibitor",
-    "Organizer",
-    "Special Invitee / VIP",
-    "Crew Member",
-    "Junicorn (Full Tour/Expedition)",
-    "Junicorn (Conference + Exhibition only)",
-    "Metaverse Only"
+    "Junicorn Summit (29th May)",
+    "AI Summit (30th May)",
+    "Junicorn + AI Summit (29th & 30th May)"
   ];
   
   export const arrivalLocations = [

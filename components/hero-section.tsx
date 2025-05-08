@@ -50,7 +50,7 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void
             transition={{ delay: 0.3 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white leading-tight"
           >
-            ISF Global AI Summit <br></br>&amp; Junicorn 2025
+            ISF Global Junicorn <br></br>&amp; AI Summit 2025
           </motion.h1>
 
           <motion.p

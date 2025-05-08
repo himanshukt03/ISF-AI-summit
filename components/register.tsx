@@ -46,7 +46,6 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
       newErrors.otherArrivalLocation = "Please specify your arrival location";
     }
   
-    // Only validate dates if they are provided
     if (formData.arrivalDate) {
       const arrivalDate = new Date(formData.arrivalDate);
       if (isNaN(arrivalDate.getTime())) {
@@ -61,7 +60,6 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
       }
     }
   
-    // Only compare dates if both are provided
     if (formData.arrivalDate && formData.departureDate) {
       const arrivalDate = new Date(formData.arrivalDate);
       const departureDate = new Date(formData.departureDate);
@@ -103,12 +101,10 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
       const data = await response.json();
   
       if (!response.ok) {
-        // Handle specific error cases
         if (response.status === 409) {
           setSubmitState("duplicate");
           setErrors({ email: data.message || "This email is already registered" });
         } else if (response.status === 400 && data.errors) {
-          // Handle validation errors from server
           const newErrors: FormErrors = {};
           data.errors.forEach((err: { field: string; message: string }) => {
             newErrors[err.field as keyof FormErrors] = err.message;
@@ -126,7 +122,7 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
           } else {
             router.push("/");
           }
-        }, 2000);
+        }, 3500);
       }
     } catch (error) {
       console.error("Registration error:", error);
@@ -461,22 +457,43 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
           >
             <AnimatePresence mode="wait">
               {isSubmitting && submitState === "idle" && (
-                <motion.div className="absolute inset-0 flex items-center justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                <motion.div 
+                  key="loading"
+                  className="absolute inset-0 flex items-center justify-center" 
+                  initial={{ opacity: 0 }} 
+                  animate={{ opacity: 1 }} 
+                  exit={{ opacity: 0 }}
+                >
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 </motion.div>
               )}
               {submitState === "success" && (
-                <motion.div className="absolute inset-0 flex items-center justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <motion.div 
+                  key="success"
+                  className="absolute inset-0 flex items-center justify-center" 
+                  initial={{ opacity: 0 }} 
+                  animate={{ opacity: 1 }}
+                >
                   <Check className="w-5 h-5 mr-2" /> Registration Successful
                 </motion.div>
               )}
               {submitState === "error" && (
-                <motion.div className="absolute inset-0 flex items-center justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <motion.div 
+                  key="error"
+                  className="absolute inset-0 flex items-center justify-center" 
+                  initial={{ opacity: 0 }} 
+                  animate={{ opacity: 1 }}
+                >
                   <AlertTriangle className="w-5 h-5 mr-2" /> Registration Failed
                 </motion.div>
               )}
               {submitState === "duplicate" && (
-                <motion.div className="absolute inset-0 flex items-center justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <motion.div 
+                  key="duplicate"
+                  className="absolute inset-0 flex items-center justify-center" 
+                  initial={{ opacity: 0 }} 
+                  animate={{ opacity: 1 }}
+                >
                   <AlertTriangle className="w-5 h-5 mr-2" /> Already Registered
                 </motion.div>
               )}

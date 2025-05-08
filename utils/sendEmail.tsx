@@ -52,7 +52,7 @@ export const sendConfirmationEmail = async (email: string, name: string): Promis
     const result = await sendWithRetry({
       from: `ISF Global AI Summit <noreply@${domain}>`,
       to: [email],
-      subject: "Registration Confirmed – GLOBAL JUNICORN & AI Summits 2025",
+      subject: "Registration Confirmed – GLOBAL JUNICORN & AI SUMMIT 2025",
       text: `Dear ${name},\n\nDelighted to confirm your registration for the GLOBAL JUNICORN SUMMIT on 29th May and GLOBAL AI SUMMIT on 30th May 2025, hosted by the International StartUp Foundation (ISF) at Texas State University, San Marcos, Texas, USA.\n\nYou'll be joining top unicorn founders, CXOs, innovators, and leaders for two powerful days of keynotes, networking, and global collaboration.\n\nPlease find the brochure attached for full details.\nWe look forward to seeing you there!\n\nFor any support, write to hello@isfnetwork.org\n\nWarm regards,\nJ.A. Chowdary\nFounder, International StartUp Foundation\nwww.isfjunicorns.com   www.isfnetwork.org`,
       html: `<!DOCTYPE html>
 <html>
@@ -202,7 +202,7 @@ export const sendConfirmationEmail = async (email: string, name: string): Promis
         <div class="content">
             <p>Dear <span class="highlight">${name}</span>,</p>
             
-            <p>Delighted to confirm your registration for the <span class="highlight">GLOBAL JUNICORN SUMMIT</span> on 29th May and <span class="highlight">GLOBAL AI SUMMIT</span> on 30th May 2025, hosted by the International StartUp Foundation (ISF) at Texas State University, San Marcos, Texas, USA.</p>
+            <p>We are delighted to confirm your registration for the <span class="highlight">GLOBAL JUNICORN SUMMIT</span> on 29th May and <span class="highlight">GLOBAL AI SUMMIT</span> on 30th May 2025, hosted by the International StartUp Foundation (ISF) at Texas State University, San Marcos, Texas, USA.</p>
             
             <p>You'll be joining top unicorn founders, CXOs, innovators, and leaders for two powerful days of keynotes, networking, and global collaboration.</p>
             
@@ -210,7 +210,7 @@ export const sendConfirmationEmail = async (email: string, name: string): Promis
             
             <p>We look forward to seeing you there!</p>
             
-            <p>For any support, write to <a href="mailto:hello@isfnetwork.org">hello@isfnetwork.org</a></p>
+            <p>For any assistance, please contact us at <a href="mailto:hello@isfnetwork.org">hello@isfnetwork.org</a></p>
             
             <div class="signature">
                 <p>Warm regards,</p>

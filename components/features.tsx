@@ -1,7 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sprout, Package, HeartPulse, Atom, BookOpenCheck } from "lucide-react";
+import { 
+  HeartPulse, 
+  Landmark, 
+  Globe, 
+  Shield, 
+  Rocket 
+} from "lucide-react";
 
 interface FeaturesProps {
   id?: string;
@@ -15,29 +21,29 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: <Package className="w-8 h-8 text-blue-400" />,
-    title: "LogiTech AI",
-    description: "The Future of AI in Supply Chain & Logistics",
-  },
-  {
-    icon: <Sprout className="w-8 h-8 text-green-400" />,
-    title: "SmartSeeds",
-    description: "The Future of AgriTech & Food Security",
-  },
-  {
     icon: <HeartPulse className="w-8 h-8 text-red-400" />,
-    title: "Vital Visions",
-    description: "Healthcare Meets AI",
+    title: "Next-Gen Health",
+    description: "AI Across the Continuum",
   },
   {
-    icon: <Atom className="w-8 h-8 text-purple-400" />,
-    title: "Quantum Fields",
-    description: "AI & Finance Risk Frontiers",
+    icon: <Landmark className="w-8 h-8 text-blue-400" />,
+    title: "Capital Meets Innovation",
+    description: "AI Investor Connect",
   },
   {
-    icon: <BookOpenCheck className="w-8 h-8 text-yellow-400" />,
-    title: "EduScape",
-    description: "Personalized Education in the Digital Age",
+    icon: <Globe className="w-8 h-8 text-green-400" />,
+    title: "AI Everywhere",
+    description: "Cross-Industry Impact",
+  },
+  {
+    icon: <Shield className="w-8 h-8 text-purple-400" />,
+    title: "GCC Without Borders",
+    description: "AI, Operations & Data Privacy",
+  },
+  {
+    icon: <Rocket className="w-8 h-8 text-yellow-400" />,
+    title: "Future Forward",
+    description: "AI, Work, & What Comes Next",
   },
 ];
 
@@ -53,10 +59,10 @@ export function Features({ id }: FeaturesProps) {
           className="mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Key Topics and Roundtables
+            Roundtable Discussions
           </h2>
           <p className="text-foreground/60 max-w-2xl mx-auto">
-            Explore the groundbreaking topics shaping the future of AI.
+            Engage in thought-provoking discussions on AI's transformative impact across industries.
           </p>
         </motion.div>
 
@@ -68,13 +74,13 @@ export function Features({ id }: FeaturesProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-[#1c212f] p-6 h-48 flex flex-col justify-between items-center text-center rounded-xl shadow-lg"
+              className="relative bg-[#1c212f] p-6 h-48 flex flex-col justify-between items-center text-center rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
               <div
                 className="bg-opacity-20 p-4 rounded-full"
                 style={{
                   backgroundColor: feature.icon.props.className.includes('text-')
-                    ? feature.icon.props.className.replace('text-', 'bg-')
+                    ? feature.icon.props.className.replace('text-', 'bg-').replace('400', '400/20')
                     : '',
                 }}
               >

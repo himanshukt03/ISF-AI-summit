@@ -431,7 +431,7 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
           </div>
 
           {/* Virtual Attendance Option */}
-          <div className="mt-6 p-0">
+          {/* <div className="mt-6 p-0">
             <h4 className="text-blue-400 font-medium text-lg mb-2">Can't be in Austin?</h4>
             <a
               href="https://www.playubu.ai/isf"
@@ -439,9 +439,9 @@ export default function RegisterForm({ isPopup = false, isOpen = true, setIsOpen
               rel="noopener noreferrer"
               className="text-white mb-3 inline-block hover:underline hover:text-blue-400 transition-colors"
             >
-              Attend virtually and join us in the Metaverse →
+              Join us in a virtual webinar 
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 

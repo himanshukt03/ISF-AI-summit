@@ -88,6 +88,62 @@ export function SpeakersSection({ id }: { id?: string }) {
       linkedIn: "https://www.linkedin.com/in/joytandallas/",
       featured: false,
     },
+    {
+      "name": "Prakash Bodla",
+      "role": "Founder CEO",
+      "company": "aAROHAN Consulting",
+      "image": "/speakers/prakash_bodla.jpg",
+      "linkedIn": "https://www.linkedin.com/in/bodla/?originalSubdomain=in",
+      "featured": false
+    },
+    {
+      "name": "Sri Atluri",
+      "role": "Managing Director, Global Head of Enterprise Quality",
+      "company": "BNY",
+      "image": "/speakers/sri_atluri.jpg",
+      "linkedIn": "https://www.linkedin.com/in/sriatluri9/",
+      "featured": false
+    },
+    {
+      "name": "Raviprasad Pisupati",
+      "role": "Founder & Managing Partner",
+      "company": "Tempus Law Associates",
+      "image": "/speakers/raviprasad_pisupati.png",
+      "linkedIn": "https://tempuslaw.co.in/ravi-profile/",
+      "featured": false
+    },
+    {
+      "name": "Sridevi Koneru",
+      "role": "VP Customer Success for Industries and Revenue Cloud",
+      "company": "Salesforce",
+      "image": "/speakers/sridevi_koneru.jpg",
+      "linkedIn": "https://www.linkedin.com/in/sridevikoneru/?originalSubdomain=in",
+      "featured": false
+    },
+    {
+      "name": "Srihari Bhat",
+      "role": "Founder Director",
+      "company": "PACE Wisdom Solutions",
+      "image": "/speakers/srihari_bhat.jpg",
+      "linkedIn": "https://www.linkedin.com/in/fayarjomandi/",
+      "featured": false
+    },
+    {
+      "name": "Krishna Kumar",
+      "role": "Technologist, Innovator, Investor",
+      "company": "",
+      "image": "/speakers/krishna.png",
+      "linkedIn": "https://www.linkedin.com/in/kkrishkumar/",
+      "featured": false
+    },
+    {
+      "name": "Satish Madhira",
+      "role": "General Partner & Founder CEO",
+      "company": "Shift Left Ventures, Zemoso Labs",
+      "image": "/speakers/satish.jpg",
+      "linkedIn": "https://www.linkedin.com/in/satishmadhira/",
+      "featured": false
+    }
   ];
 
   const handleViewMore = () => {

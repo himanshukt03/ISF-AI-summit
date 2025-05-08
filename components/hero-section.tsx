@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Download } from "lucide-react";
 
 export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void }) {
   return (
@@ -59,7 +59,7 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void
             transition={{ delay: 0.4 }}
             className="text-xs sm:text-sm md:text-base text-white/90 mb-6 md:mb-8 max-w-2xl"
           >
-            Get ready to experience the future of leadership, technology, and strategy like never before!
+            Join us for two power-packed days of action, insight, and inspiration with the world's top minds in AI, innovation, and entrepreneurship.
           </motion.p>
 
           <motion.div
@@ -82,10 +82,16 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void
               size="lg"
               variant="outline"
               className="text-white border-white hover:bg-white/10"
-              onClick={() => window.open('https://www.isfnetwork.org/isf-global-ai-summit/', '_blank')}
-              aria-label="Learn more about ISF Global AI Summit 2025"
+              asChild
             >
-              Learn More
+              <a
+                href="/GLOBAL%20JUNICORN%20Brochure.pdf"
+                download
+                aria-label="Download the Global Junicorn Brochure"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Brochure
+              </a>
             </Button>
           </motion.div>
         </motion.div>

@@ -48,13 +48,6 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               <button
-                onClick={() => window.open("https://www.playubu.ai/isf", "_blank")}
-                className="text-gray-300 hover:text-white transition-colors duration-300"
-              >
-                Metaverse Access
-              </button>
-
-              <button
                 onClick={() => scrollToSection("key-topics")}
                 className="text-gray-300 hover:text-white"
               >
@@ -112,16 +105,16 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
             <button
-              onClick={() => scrollToSection("metaverse")}
-              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
-            >
-              Metaverse Access
-            </button>
-            <button
               onClick={() => scrollToSection("key-topics")}
               className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
             >
               Key Topics
+            </button>
+            <button
+              onClick={() => scrollToSection("speakers")}
+              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
+            >
+              Speakers
             </button>
             <button
               onClick={() => scrollToSection("schedule")}
@@ -130,10 +123,16 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
               Schedule
             </button>
             <button
-              onClick={() => scrollToSection("whyattend")}
+              onClick={() => scrollToSection("venue")}
               className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
             >
-              Why Attend?
+              Location
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
+            >
+              About Us
             </button>
             <div className="px-3 py-2">
               <Button

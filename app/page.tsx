@@ -48,7 +48,7 @@ export default function Home() {
             <div className="h-full">
               <RegisterWrapper setIsOpen={handleOpenRegister} />
               <KeyHighlights />
-              <MetaverseSection />
+              {/* <MetaverseSection /> */}
               <Features id="key-topics" />
               <SpeakersSection />
               <Schedule id="schedule" />

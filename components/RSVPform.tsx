@@ -27,9 +27,9 @@ const defaultFormData: RSVPFormData = {
 };
 
 const attendanceOptions = [
-  "Junicorn Summit (29th May)",
-  "AI Summit (30th May)",
-  "Junicorn + AI Summit (29th & 30th May)",
+  "Junicorn Summit (29th May, 2025)",
+  "AI Summit (30th May, 2025)",
+  "Junicorn + AI Summit (29th & 30th, 2025)",
 ];
 
 function RSVPFormContent({

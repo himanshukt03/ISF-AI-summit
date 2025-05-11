@@ -19,6 +19,14 @@ export function SpeakersSection({ id }: { id?: string }) {
 
   const speakers: Speaker[] = [
     {
+      "name": "Sri D Sridhar Babu",
+      "role": "Minister for ITE&C, Industries & Commerce, Legislative Affairs",
+      "company": "GoT (Government of Telangana)",
+      "image": "/speakers/Sridhar_Babu.jpg",
+      "linkedIn": "https://www.linkedin.com/in/sridharbabududdilla/",
+      "featured": false
+    },
+    {
       name: "Dr. JA Chowdary",
       role: "Founder & Chairman",
       company: "International Startup Foundation",
@@ -26,6 +34,30 @@ export function SpeakersSection({ id }: { id?: string }) {
       linkedIn:
         "https://www.linkedin.com/in/jachowdary/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
       featured: false,
+    },
+    {
+      "name": "Murali Bukkapatnam",
+      "role": "Chairman",
+      "company": "Global Board of Trustees, TiE",
+      "image": "/speakers/murali_bukkapatnam.jpg",
+      "linkedIn": "https://www.linkedin.com/in/bukkapatnam/?originalSubdomain=in",
+      "featured": false
+    },
+    {
+      name: "Joy Tan",
+      role: "Advisor",
+      company:"Green Evolution Technologies Inc & Qurator.com",
+      image: "/speakers/Joy_Tan.jpg",
+      linkedIn: "https://www.linkedin.com/in/joytandallas/",
+      featured: false,
+    },
+    {
+      "name": "Sri Atluri",
+      "role": "Managing Director, Global Head of Enterprise Quality",
+      "company": "BNY",
+      "image": "/speakers/sri_atluri.jpg",
+      "linkedIn": "https://www.linkedin.com/in/sriatluri9/",
+      "featured": false
     },
     {
       name: "Joginder Tanikella",
@@ -41,8 +73,7 @@ export function SpeakersSection({ id }: { id?: string }) {
       role: "Former CVP HR",
       company: "UPS & AMD",
       image: "/speakers/kiranmai_pendyala.png",
-      linkedIn:
-        "https://www.linkedin.com/in/kiranmai-pendyala-94335427/?originalSubdomain=in",
+      linkedIn: "https://www.linkedin.com/in/kiranmai-pendyala-94335427/?originalSubdomain=in",
       featured: false,
     },
     {
@@ -80,28 +111,11 @@ export function SpeakersSection({ id }: { id?: string }) {
       featured: false,
     },
     {
-      name: "Joy Tan",
-      role: "Advisor",
-      company:
-        "Green Evolution Technologies Inc & Qurator.com",
-      image: "/speakers/Joy_Tan.jpg",
-      linkedIn: "https://www.linkedin.com/in/joytandallas/",
-      featured: false,
-    },
-    {
       "name": "Prakash Bodla",
       "role": "Founder CEO",
       "company": "aAROHAN Consulting",
       "image": "/speakers/prakash_bodla.jpg",
       "linkedIn": "https://www.linkedin.com/in/bodla/?originalSubdomain=in",
-      "featured": false
-    },
-    {
-      "name": "Sri Atluri",
-      "role": "Managing Director, Global Head of Enterprise Quality",
-      "company": "BNY",
-      "image": "/speakers/sri_atluri.jpg",
-      "linkedIn": "https://www.linkedin.com/in/sriatluri9/",
       "featured": false
     },
     {
@@ -142,6 +156,70 @@ export function SpeakersSection({ id }: { id?: string }) {
       "company": "Shift Left Ventures, Zemoso Labs",
       "image": "/speakers/satish.jpg",
       "linkedIn": "https://www.linkedin.com/in/satishmadhira/",
+      "featured": false
+    },
+    {
+      "name": "Dr. Sanjay Ramchander",
+      "role": "Dean",
+      "company": "McCoy College of Business at Texas State University",
+      "image": "/speakers/Dr_SanjayRamchander.jpg",
+      "linkedIn": "https://www.linkedin.com/in/sanjay-ramchander-66435a2/",
+      "featured": false
+    },
+    {
+      "name": "Teresa Quinn",
+      "role": "Director",
+      "company": "Center for Innovation & Entrepreneurship, Texas State University",
+      "image": "/speakers/TeresaQuinn.jpg",
+      "linkedIn": "https://www.linkedin.com/in/teresa-quinn/",
+      "featured": false
+    },
+    {
+      "name": "Dr. Kancherla Ravindranath",
+      "role": "Founder",
+      "company": "Global Hospitals Group",
+      "image": "/speakers/Dr_Kancherla.jpg",
+      "linkedIn": "https://www.linkedin.com/in/ravindranath-kancherla-8bb79b25/",
+      "featured": false
+    },
+    {
+      "name": "Angelos Angelou",
+      "role": "CEO, Chief Strategist",
+      "company": "AngelouEconomics",
+      "image": "/speakers/AngelosAngelou.jpg",
+      "linkedIn": "https://www.linkedin.com/in/angelosangelou/",
+      "featured": false
+    },
+    {
+      "name": "Ravi Mantha",
+      "role": "Co-Founder & Director",
+      "company": "Bollant Industries",
+      "image": "/speakers/RaviMantha.jpg",
+      "linkedIn": "https://www.linkedin.com/in/ravimantha/?originalSubdomain=in",
+      "featured": false
+    },
+    {
+      "name": "Prasad Gundumogula",
+      "role": "Chairman, CEO, and Founder",
+      "company": "Mondee Holdings Inc.",
+      "image": "/speakers/PrasadGundumogula.jpg",
+      "linkedIn": "https://www.linkedin.com/in/prasadgundumogula/",
+      "featured": false
+    },
+    {
+      "name": "Jay Talluri",
+      "role": "Founder Chairman",
+      "company": "Hallmark Group",
+      "image": "/speakers/Jayasekhar_Talluri.jpg",
+      "linkedIn": "https://www.linkedin.com/in/jay-talluri-4109b81/",
+      "featured": false
+    },
+    {
+      "name": "Panneerselvam (PS) Madanagopal",
+      "role": "CEO",
+      "company": "Meity Startup Hub - Govt of India",
+      "image": "/speakers/Panneerselvam.jpg",
+      "linkedIn": "https://www.linkedin.com/in/panneerselvam79/?originalSubdomain=in",
       "featured": false
     }
   ];

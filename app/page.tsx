@@ -15,6 +15,7 @@ import HotelStay from "@/components/HotelStay";
 import { VenueSection } from "@/components/venueSection";
 import { SpeakersSection } from "@/components/speakers";
 import { AboutSection } from "@/components/about";
+import { PartnersShowcase } from "@/components/partners";
 
 
 export default function Home() {
@@ -55,6 +56,7 @@ export default function Home() {
               <VenueSection />
               <HotelStay />
               <AboutSection />
+              <PartnersShowcase />
               <WhyAttend id="whyattend" />
               <Footer />
             </div>

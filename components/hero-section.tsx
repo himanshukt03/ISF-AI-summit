@@ -40,7 +40,7 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void
           >
             <span className="px-3 py-1 text-xs md:text-sm font-semibold bg-black/20 backdrop-blur-md rounded-full inline-block mb-3 text-white">
               <Sparkles className="inline-block w-4 h-4 mr-1" />
-              May 29-30, 2025 • Austin, USA
+              May 29-30, 2025 • Texas, USA
             </span>
           </motion.div>
 

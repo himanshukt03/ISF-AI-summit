@@ -34,22 +34,28 @@ export function PartnersShowcase() {
   }, []);
 
   return (
-    <section className="py-12 md:py-20 bg-background" id="partners">
-      <div className="container px-4 mx-auto">
-        {/* Supporting Organisations Section */}
+    <section className="py-12 md:py-20 bg-background relative overflow-hidden" id="partners">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-[length:60px_60px]" />
+      </div>
+
+      <div className="container px-4 mx-auto relative z-10">
+        {/* Main Section Heading and Junicorn + AI Summit Section Combined */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-10"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
-            <span>ISF Global Junicorn + AI Summit</span>
-            <br />
-            <span>Supporting Organisations</span>
+          <span className="px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white/5 rounded-full mb-4 inline-block text-blue-300">
+            Our Partners
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+            Supporting Organizations
           </h2>
-          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
+          <p className="text-white/70 text-sm md:text-base max-w-2xl mx-auto">
             Collaborating with innovative organizations to drive AI and technology forward.
           </p>
         </motion.div>
@@ -84,12 +90,14 @@ export function PartnersShowcase() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-10"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">Junicorn Project Partners</h2>
-          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
-            Empowering young entrepreneurs to innovate and lead the future of AI and technology
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Junicorn Project Partners
+          </h2>
+          <p className="text-white/70 text-sm md:text-base max-w-2xl mx-auto">
+            Empowering young entrepreneurs to innovate and lead the future technology
           </p>
         </motion.div>
 
@@ -100,7 +108,7 @@ export function PartnersShowcase() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ transition: 0.6, delay: index * 0.1 }}
               className="partner-card"
             >
               <img
@@ -200,24 +208,24 @@ export function PartnersShowcase() {
         @media (max-width: 768px) {
           .supporting-grid {
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            gap: 1.5rem;
           }
 
           .supporting-card {
-            max-width: 160px;
-            height: 100px;
+            max-width: 140px;
+            height: 90px;
           }
         }
 
         @media (max-width: 480px) {
           .supporting-grid {
             grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
+            gap: 1.25rem;
           }
 
           .supporting-card {
-            max-width: 140px;
-            height: 90px;
+            max-width: 120px;
+            height: 80px;
           }
         }
 

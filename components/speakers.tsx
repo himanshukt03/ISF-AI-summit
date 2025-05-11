@@ -20,7 +20,7 @@ export function SpeakersSection({ id }: { id?: string }) {
   const speakers: Speaker[] = [
     {
       "name": "Sri D Sridhar Babu",
-      "role": "Minister for ITE&C, Industries & Commerce, Legislative Affairs",
+      "role": "Minister for Industries & Commerce, Legislative Affairs",
       "company": "GoT (Government of Telangana)",
       "image": "/speakers/Sridhar_Babu.jpg",
       "linkedIn": "https://www.linkedin.com/in/sridharbabududdilla/",

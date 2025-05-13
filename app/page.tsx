@@ -5,7 +5,7 @@ import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react"; 
 import { Navbar } from "@/components/navbar";
 import RegisterWrapper from "@/components/register-wrapper";
-import { KeyHighlights } from "@/components/key-highlights";
+import { SummitHighlights } from "@/components/key-highlights"; // Updated import
 import { Schedule } from "@/components/schedule";
 import { Features } from "@/components/features";
 import { Footer } from "@/components/footer";
@@ -16,7 +16,6 @@ import { VenueSection } from "@/components/venueSection";
 import { SpeakersSection } from "@/components/speakers";
 import { AboutSection } from "@/components/about";
 import { PartnersShowcase } from "@/components/partners";
-
 
 export default function Home() {
   const router = useRouter();
@@ -48,7 +47,7 @@ export default function Home() {
           <div className="flex-1 overflow-y-auto">
             <div className="h-full">
               <RegisterWrapper setIsOpen={handleOpenRegister} />
-              <KeyHighlights />
+              <SummitHighlights /> {/* Updated component */}
               {/* <MetaverseSection /> */}
               <Features id="key-topics" />
               <SpeakersSection />

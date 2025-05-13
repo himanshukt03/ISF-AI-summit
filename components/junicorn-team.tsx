@@ -133,7 +133,7 @@ export function JunicornTeamSection({ id }: { id?: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="w-64 lg:w-72 flex flex-col items-center p-4 sm:p-5 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-500/20 shadow-md"
+              className="w-[calc(50%-0.5rem)] sm:w-64 lg:w-72 flex flex-col items-center p-4 sm:p-5 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-500/20 shadow-md"
             >
               <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mb-3 border border-white/10">
                 <Image
@@ -182,7 +182,7 @@ export function JunicornTeamSection({ id }: { id?: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="w-64 flex flex-col items-center p-4 sm:p-5 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-500/20 shadow-md"
+              className="w-[calc(50%-0.5rem)] sm:w-64 flex flex-col items-center p-4 sm:p-5 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-500/20 shadow-md"
             >
               <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mb-3 border border-white/10">
                 <Image

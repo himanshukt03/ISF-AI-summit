@@ -2,6 +2,36 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import Image from "next/image";
+
+// Partnerships data
+const partnerships = [
+  {
+    category: "In Partnership With",
+    logos: [
+      { src: "/logos/quality.jpg", alt: "Quality Engineering Foundation logo" },
+    ],
+  },
+  {
+    category: "Powered By",
+    logos: [
+      { src: "/logos/Mondee-Logo-1.png", alt: "Mondee logo" },
+      { src: "/logos/power_mech.png", alt: "Power Mech logo" },
+    ],
+  },
+  {
+    category: "Hosting Partner",
+    logos: [
+      { src: "/logos/McCoy.jpg", alt: "McCoy College of Business, Texas State University logo" },
+    ],
+  },
+  {
+    category: "Strategic Partner",
+    logos: [
+      { src: "/logos/singularity.png", alt: "Singularity University logo" },
+    ],
+  },
+];
 
 // Supporting Organisations data
 const supportingOrganisations = [
@@ -29,8 +59,8 @@ export function PartnersShowcase() {
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   return (
@@ -41,7 +71,69 @@ export function PartnersShowcase() {
       </div>
 
       <div className="container px-4 mx-auto relative z-10">
-        {/* Main Section Heading and Junicorn + AI Summit Section Combined */}
+        {/* New Partnerships Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 bg-card rounded-2xl py-8 px-4 shadow-lg border"
+        >
+          <span className="px-3 py-1 text-xs font-medium tracking-wider uppercase bg-primary/10 rounded-full mb-4 inline-block text-primary">
+            Partnerships
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+            Our Key Partnerships
+          </h2>
+          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
+            Collaborating with leading organizations to drive innovation and impact.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            {partnerships.map((partnership, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-card p-6 rounded-xl shadow-sm border hover:shadow-md transition-shadow"
+              >
+                <h3 className="text-sm md:text-base font-semibold text-foreground mb-4 uppercase tracking-wide">
+                  {partnership.category}
+                </h3>
+                <div
+                  className={`flex ${
+                    partnership.category === "Powered By"
+                      ? "flex-row gap-4 items-center justify-center"
+                      : "flex-col items-center justify-center" // Added items-center justify-center for consistency
+                  }`}
+                >
+                  {partnership.logos.map((logo, logoIndex) => (
+                    <div
+                      key={logoIndex}
+                      className="flex items-center justify-center h-20 w-full" // Ensure w-full for single logos too
+                    >
+                      <Image
+                        src={logo.src}
+                        alt={logo.alt}
+                        width={160}
+                        height={80}
+                        className="object-contain h-full w-auto max-w-full p-2" // Adjusted for better scaling
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Separator */}
+        <hr className="my-12 border-t border-border" />
+
+        {/* Supporting Organisations Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,18 +141,18 @@ export function PartnersShowcase() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white/5 rounded-full mb-4 inline-block text-blue-300">
+          <span className="px-3 py-1 text-xs font-medium tracking-wider uppercase bg-primary/10 rounded-full mb-4 inline-block text-primary">
             Our Partners
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
             Supporting Organizations
           </h2>
-          <p className="text-white/70 text-sm md:text-base max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
             Collaborating with innovative organizations to drive AI and technology forward.
           </p>
         </motion.div>
 
-        <div className="supporting-grid">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {supportingOrganisations.map((org, index) => (
             <motion.div
               key={index}
@@ -68,14 +160,14 @@ export function PartnersShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="supporting-card"
+              className="flex justify-center items-center p-4 bg-card rounded-lg border hover:shadow-sm h-32 sm:h-36" // Added fixed height for consistency
             >
-              <img
+              <Image
                 src={org.src}
                 alt={org.alt}
-                className="supporting-logo"
-                width={200}
-                height={100}
+                width={160}
+                height={80}
+                className="object-contain max-h-full w-auto" // Adjusted for better scaling
                 loading="lazy"
               />
             </motion.div>
@@ -83,7 +175,7 @@ export function PartnersShowcase() {
         </div>
 
         {/* Separator */}
-        <hr className="my-12 border-t border-gray-600" />
+        <hr className="my-12 border-t border-border" />
 
         {/* Junicorn Project Partners Section */}
         <motion.div
@@ -93,182 +185,36 @@ export function PartnersShowcase() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Junicorn Project Partners
           </h2>
-          <p className="text-white/70 text-sm md:text-base max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
             Empowering young entrepreneurs to innovate and lead the future technology
           </p>
         </motion.div>
 
-        <div className="partners-grid">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ transition: 0.6, delay: index * 0.1 }}
-              className="partner-card"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-card p-4 sm:p-6 rounded-lg border flex justify-center items-center hover:shadow-sm h-32 sm:h-36" // Added fixed height for consistency
             >
-              <img
+              <Image
                 src={partner.src}
                 alt={partner.alt}
-                className="partner-logo"
-                width={200}
-                height={100}
+                width={160}
+                height={80}
+                className="object-contain max-h-full w-auto" // Adjusted for better scaling
                 loading="lazy"
               />
             </motion.div>
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        .bg-background {
-          background-color: #020817; /* Correct dark background */
-        }
-
-        /* Supporting Organisations Grid */
-        .supporting-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 2rem;
-          justify-items: center;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-
-        .supporting-card {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          max-width: 250px;
-          height: 150px;
-        }
-
-        .supporting-logo {
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: contain;
-          border-radius: 0.5rem; /* Rounded edges for images */
-          border: 1px solid white; /* White outline for visibility */
-        }
-
-        /* Junicorn Partners Grid */
-        .partners-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 2rem;
-          justify-items: center;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-
-        .partner-card {
-          background-color: white;
-          border-radius: 1rem;
-          padding: 2rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          max-width: 250px;
-          height: 150px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .partner-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .partner-logo {
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: contain;
-          border-radius: 0.5rem;
-        }
-
-        /* Responsive Breakpoints for Supporting Organisations */
-        @media (max-width: 1024px) {
-          .supporting-grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-          }
-
-          .supporting-card {
-            max-width: 200px;
-            height: 130px;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .supporting-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-          }
-
-          .supporting-card {
-            max-width: 140px;
-            height: 90px;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .supporting-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
-          }
-
-          .supporting-card {
-            max-width: 120px;
-            height: 80px;
-          }
-        }
-
-        /* Responsive Breakpoints for Junicorn Partners */
-        @media (max-width: 1024px) {
-          .partners-grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-          }
-
-          .partner-card {
-            max-width: 200px;
-            height: 130px;
-            padding: 1.5rem;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .partners-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-          }
-
-          .partner-card {
-            max-width: 160px;
-            height: 100px;
-            padding: 1rem;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .partners-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-          }
-
-          .partner-card {
-            max-width: 140px;
-            height: 90px;
-            padding: 0.75rem;
-          }
-        }
-      `}</style>
     </section>
   );
 }

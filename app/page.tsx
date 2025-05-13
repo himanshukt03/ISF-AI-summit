@@ -16,6 +16,9 @@ import { VenueSection } from "@/components/venueSection";
 import { SpeakersSection } from "@/components/speakers";
 import { AboutSection } from "@/components/about";
 import { PartnersShowcase } from "@/components/partners";
+import { AngelsSection } from "@/components/angels"; 
+import { UsaTeamSection } from "@/components/usa-team";
+import { JunicornTeamSection } from "@/components/junicorn-team";
 
 export default function Home() {
   const router = useRouter();
@@ -52,6 +55,9 @@ export default function Home() {
               <Features id="key-topics" />
               <SpeakersSection />
               <Schedule id="schedule" />
+              <AngelsSection id="angels" />
+              <UsaTeamSection id="usa-team" />
+              <JunicornTeamSection id="junicorn-team" />
               <VenueSection />
               <HotelStay />
               <AboutSection />

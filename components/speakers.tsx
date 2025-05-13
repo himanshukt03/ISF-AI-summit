@@ -51,10 +51,10 @@ export function SpeakersSection({ id }: { id?: string }) {
       linkedIn: "https://www.linkedin.com/in/joytandallas/",
       featured: false,
     },
-    {
+  {
       "name": "Sri Atluri",
-      "role": "Managing Director, Global Head of Enterprise Quality",
-      "company": "BNY",
+      "role": "Chief Information & Quality Officer | Board Member | Advisory | Strategic Visionary | Empowering Top Talent | Promoting Excellence & Driving Growth | QEF",
+      "company": " President, ISF, USA",
       "image": "/speakers/sri_atluri.jpg",
       "linkedIn": "https://www.linkedin.com/in/sriatluri9/",
       "featured": false

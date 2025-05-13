@@ -19,12 +19,12 @@ export function SpeakersSection({ id }: { id?: string }) {
 
   const speakers: Speaker[] = [
     {
-      "name": "Sri D Sridhar Babu",
-      "role": "Minister for Industries & Commerce, Legislative Affairs",
-      "company": "GoT (Government of Telangana)",
-      "image": "/speakers/Sridhar_Babu.jpg",
-      "linkedIn": "https://www.linkedin.com/in/sridharbabududdilla/",
-      "featured": false
+      name: "Sri D Sridhar Babu",
+      role: "Minister for Industries & Commerce, Legislative Affairs",
+      company: "GoT (Government of Telangana)",
+      image: "/speakers/Sridhar_Babu.jpg",
+      linkedIn: "https://www.linkedin.com/in/sridharbabududdilla/",
+      featured: true,
     },
     {
       name: "Dr. JA Chowdary",
@@ -33,31 +33,23 @@ export function SpeakersSection({ id }: { id?: string }) {
       image: "/speakers/JA_chowdary.jpg",
       linkedIn:
         "https://www.linkedin.com/in/jachowdary/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
-      featured: false,
-    },
-    {
-      "name": "Murali Bukkapatnam",
-      "role": "Chairman",
-      "company": "Global Board of Trustees, TiE",
-      "image": "/speakers/murali_bukkapatnam.jpg",
-      "linkedIn": "https://www.linkedin.com/in/bukkapatnam/?originalSubdomain=in",
-      "featured": false
+      featured: true,
     },
     {
       name: "Joy Tan",
       role: "Advisor",
-      company:"Green Evolution Technologies Inc & Qurator.com",
+      company: "Green Evolution Technologies Inc & Qurator.com",
       image: "/speakers/Joy_Tan.jpg",
       linkedIn: "https://www.linkedin.com/in/joytandallas/",
-      featured: false,
+      featured: true,
     },
-  {
-      "name": "Sri Atluri",
-      "role": "Chief Information & Quality Officer | Board Member | Advisory | Strategic Visionary | Empowering Top Talent | Promoting Excellence & Driving Growth | QEF",
-      "company": " President, ISF, USA",
-      "image": "/speakers/sri_atluri.jpg",
-      "linkedIn": "https://www.linkedin.com/in/sriatluri9/",
-      "featured": false
+    {
+      name: "Sri Atluri",
+      role: "Chief Information & Quality Officer | Board Member | Advisory | Strategic Visionary | Empowering Top Talent | Promoting Excellence & Driving Growth | QEF",
+      company: " President, ISF, USA",
+      image: "/speakers/sri_atluri.jpg",
+      linkedIn: "https://www.linkedin.com/in/sriatluri9/",
+      featured: true,
     },
     {
       name: "Joginder Tanikella",
@@ -111,117 +103,213 @@ export function SpeakersSection({ id }: { id?: string }) {
       featured: false,
     },
     {
-      "name": "Prakash Bodla",
-      "role": "Founder CEO",
-      "company": "aAROHAN Consulting",
-      "image": "/speakers/prakash_bodla.jpg",
-      "linkedIn": "https://www.linkedin.com/in/bodla/?originalSubdomain=in",
-      "featured": false
+      name: "Prakash Bodla",
+      role: "Founder CEO",
+      company: "aAROHAN Consulting",
+      image: "/speakers/prakash_bodla.jpg",
+      linkedIn: "https://www.linkedin.com/in/bodla/?originalSubdomain=in",
+      featured: false,
     },
     {
-      "name": "Raviprasad Pisupati",
-      "role": "Founder & Managing Partner",
-      "company": "Tempus Law Associates",
-      "image": "/speakers/raviprasad_pisupati.png",
-      "linkedIn": "https://tempuslaw.co.in/ravi-profile/",
-      "featured": false
+      name: "Raviprasad Pisupati",
+      role: "Founder & Managing Partner",
+      company: "Tempus Law Associates",
+      image: "/speakers/raviprasad_pisupati.png",
+      linkedIn: "https://tempuslaw.co.in/ravi-profile/",
+      featured: false,
     },
     {
-      "name": "Sridevi Koneru",
-      "role": "VP Customer Success for Industries and Revenue Cloud",
-      "company": "Salesforce",
-      "image": "/speakers/sridevi_koneru.jpg",
-      "linkedIn": "https://www.linkedin.com/in/sridevikoneru/?originalSubdomain=in",
-      "featured": false
+      name: "Sridevi Koneru",
+      role: "VP Customer Success for Industries and Revenue Cloud",
+      company: "Salesforce",
+      image: "/speakers/sridevi_koneru.jpg",
+      linkedIn: "https://www.linkedin.com/in/sridevikoneru/?originalSubdomain=in",
+      featured: false,
     },
     {
-      "name": "Srihari Bhat",
-      "role": "Founder Director",
-      "company": "PACE Wisdom Solutions",
-      "image": "/speakers/srihari_bhat.jpg",
-      "linkedIn": "https://www.linkedin.com/in/fayarjomandi/",
-      "featured": false
+      name: "Srihari Bhat",
+      role: "Founder Director",
+      company: "PACE Wisdom Solutions",
+      image: "/speakers/srihari_bhat.jpg",
+      linkedIn: "https://www.linkedin.com/in/fayarjomandi/",
+      featured: false,
     },
     {
-      "name": "Krishna Kumar",
-      "role": "Technologist, Innovator, Investor",
-      "company": "",
-      "image": "/speakers/krishna.png",
-      "linkedIn": "https://www.linkedin.com/in/kkrishkumar/",
-      "featured": false
+      name: "Krishna Kumar",
+      role: "Technologist, Innovator, Investor",
+      company: "",
+      image: "/speakers/krishna.png",
+      linkedIn: "https://www.linkedin.com/in/kkrishkumar/",
+      featured: false,
     },
     {
-      "name": "Satish Madhira",
-      "role": "General Partner & Founder CEO",
-      "company": "Shift Left Ventures, Zemoso Labs",
-      "image": "/speakers/satish.jpg",
-      "linkedIn": "https://www.linkedin.com/in/satishmadhira/",
-      "featured": false
+      name: "Satish Madhira",
+      role: "General Partner & Founder CEO",
+      company: "Shift Left Ventures, Zemoso Labs",
+      image: "/speakers/satish.jpg",
+      linkedIn: "https://www.linkedin.com/in/satishmadhira/",
+      featured: false,
     },
     {
-      "name": "Dr. Sanjay Ramchander",
-      "role": "Dean",
-      "company": "McCoy College of Business at Texas State University",
-      "image": "/speakers/Dr_SanjayRamchander.jpg",
-      "linkedIn": "https://www.linkedin.com/in/sanjay-ramchander-66435a2/",
-      "featured": false
+      name: "Dr. Sanjay Ramchander",
+      role: "Dean",
+      company: "McCoy College of Business at Texas State University",
+      image: "/speakers/Dr_SanjayRamchander.jpg",
+      linkedIn: "https://www.linkedin.com/in/sanjay-ramchander-66435a2/",
+      featured: false,
     },
     {
-      "name": "Teresa Quinn",
-      "role": "Director",
-      "company": "Center for Innovation & Entrepreneurship, Texas State University",
-      "image": "/speakers/TeresaQuinn.jpg",
-      "linkedIn": "https://www.linkedin.com/in/teresa-quinn/",
-      "featured": false
+      name: "Teresa Quinn",
+      role: "Director",
+      company: "Center for Innovation & Entrepreneurship, Texas State University",
+      image: "/speakers/TeresaQuinn.jpg",
+      linkedIn: "https://www.linkedin.com/in/teresa-quinn/",
+      featured: false,
     },
     {
-      "name": "Dr. Kancherla Ravindranath",
-      "role": "Founder",
-      "company": "Global Hospitals Group",
-      "image": "/speakers/Dr_Kancherla.jpg",
-      "linkedIn": "https://www.linkedin.com/in/ravindranath-kancherla-8bb79b25/",
-      "featured": false
+      name: "Dr. Kancherla Ravindranath",
+      role: "Founder",
+      company: "Global Hospitals Group",
+      image: "/speakers/Dr_Kancherla.jpg",
+      linkedIn: "https://www.linkedin.com/in/ravindranath-kancherla-8bb79b25/",
+      featured: false,
     },
     {
-      "name": "Angelos Angelou",
-      "role": "CEO, Chief Strategist",
-      "company": "AngelouEconomics",
-      "image": "/speakers/AngelosAngelou.jpg",
-      "linkedIn": "https://www.linkedin.com/in/angelosangelou/",
-      "featured": false
+      name: "Angelos Angelou",
+      role: "CEO, Chief Strategist",
+      company: "AngelouEconomics",
+      image: "/speakers/AngelosAngelou.jpg",
+      linkedIn: "https://www.linkedin.com/in/angelosangelou/",
+      featured: false,
     },
     {
-      "name": "Ravi Mantha",
-      "role": "Co-Founder & Director",
-      "company": "Bollant Industries",
-      "image": "/speakers/RaviMantha.jpg",
-      "linkedIn": "https://www.linkedin.com/in/ravimantha/?originalSubdomain=in",
-      "featured": false
+      name: "Ravi Mantha",
+      role: "Co-Founder & Director",
+      company: "Bollant Industries",
+      image: "/speakers/RaviMantha.jpg",
+      linkedIn: "https://www.linkedin.com/in/ravimantha/?originalSubdomain=in",
+      featured: false,
     },
     {
-      "name": "Prasad Gundumogula",
-      "role": "Chairman, CEO, and Founder",
-      "company": "Mondee Holdings Inc.",
-      "image": "/speakers/PrasadGundumogula.jpg",
-      "linkedIn": "https://www.linkedin.com/in/prasadgundumogula/",
-      "featured": false
+      name: "Prasad Gundumogula",
+      role: "Chairman, CEO, and Founder",
+      company: "Mondee Holdings Inc.",
+      image: "/speakers/PrasadGundumogula.jpg",
+      linkedIn: "https://www.linkedin.com/in/prasadgundumogula/",
+      featured: false,
     },
     {
-      "name": "Jay Talluri",
-      "role": "Founder Chairman",
-      "company": "Hallmark Group",
-      "image": "/speakers/Jayasekhar_Talluri.jpg",
-      "linkedIn": "https://www.linkedin.com/in/jay-talluri-4109b81/",
-      "featured": false
+      name: "Jay Talluri",
+      role: "Founder Chairman",
+      company: "Hallmark Group",
+      image: "/speakers/Jayasekhar_Talluri.jpg",
+      linkedIn: "https://www.linkedin.com/in/jay-talluri-4109b81/",
+      featured: false,
     },
     {
-      "name": "Panneerselvam (PS) Madanagopal",
-      "role": "CEO",
-      "company": "Meity Startup Hub - Govt of India",
-      "image": "/speakers/Panneerselvam.jpg",
-      "linkedIn": "https://www.linkedin.com/in/panneerselvam79/?originalSubdomain=in",
-      "featured": false
-    }
+      name: "Panneerselvam (PS) Madanagopal",
+      role: "CEO",
+      company: "Meity Startup Hub - Govt of India",
+      image: "/speakers/Panneerselvam.jpg",
+      linkedIn: "https://www.linkedin.com/in/panneerselvam79/?originalSubdomain=in",
+      featured: false,
+    },
+  {
+    "name": "Dr. Krishnaiah Kurapati",
+    "role": "CEO",
+    "company": "Basavatarakam Indo-American Cancer Hospital & Research Institute",
+    "image": "/speakers/krishnaiah_kurapati.jpg",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Ram Pratti",
+    "role": "Founder CEO",
+    "company": "AI Driven Quant Fund",
+    "image": "/speakers/ram_pratti.jpg",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Somesh Chablani",
+    "role": "Global Head of Go-to-Market & Business Development",
+    "company": "FIS Global",
+    "image": "/speakers/somesh_chablani.jpg",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Ranjeet Tayi",
+    "role": "Director User Experience",
+    "company": "Informatica",
+    "image": "/speakers/ranjeet_tayi.jpg",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Sathya Krishnamurthy",
+    "role": "Chief Product Officer",
+    "company": "Milestone Inc",
+    "image": "/speakers/sathya_krishnamurthy.jpg",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Sanjeev Deshpande",
+    "role": "Former EVP & Head of APAC",
+    "company": "NTT Data Business Solutions",
+    "image": "/speakers/sanjeev_deshpande.jpg",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Daniel Sloan",
+    "role": "Founder",
+    "company": "RealSplit & Future Tech",
+    "image": "/speakers/daniel_sloan.jpg",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Suseela Santhosh",
+    "role": "Director",
+    "company": "Vishwa Vidyapeeth Group of Schools",
+    "image": "/speakers/suseela_santhosh.jpg",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Mic Mann",
+    "role": "CEO, UBU / Co-CEO",
+    "company": "SingularityU South Africa / Mann Made",
+    "image": "/speakers/mic_mann.png",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Kiran Chandra",
+    "role": "Chief Technologist & Centre Head",
+    "company": "Viswam.AI",
+    "image": "/speakers/kiran_chandra.jpg",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Dr. Raghava Yerram",
+    "role": "Chief Data Officer & Head of Data Consulting (UK)",
+    "company": "Rplus Consulting",
+    "image": "/speakers/raghava_yerram.jpg",
+    "linkedIn": "",
+    "featured": false
+  },
+  {
+    "name": "Vijay Madduri",
+    "role": "Chairman and Co-Founder",
+    "company": "Impact Hub Hyderabad",
+    "image": "/speakers/vijay_madduri.jpg",
+    "linkedIn": "",
+    "featured": false
+  }
   ];
 
   const handleViewMore = () => {
@@ -265,8 +353,10 @@ export function SpeakersSection({ id }: { id?: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className={`flex flex-col p-3 sm:p-4 md:p-6 bg-white/5 border border-white/10 rounded-xl md:rounded-2xl backdrop-blur-lg transition-all duration-200 h-full hover:-translate-y-2 shadow-lg hover:shadow-blue-500/10 ${
-                speaker.featured ? "ring-1 ring-blue-400/30" : ""
+              className={`flex flex-col p-3 sm:p-4 md:p-6 rounded-xl md:rounded-2xl backdrop-blur-lg transition-all duration-200 h-full hover:-translate-y-2 shadow-lg hover:shadow-blue-500/10 border border-white/10 ${
+                speaker.featured
+                  ? "bg-blue-950/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+                  : "bg-white/5"
               }`}
             >
               <div className="relative w-full aspect-square rounded-lg md:rounded-xl overflow-hidden mb-3 md:mb-4 border border-white/10">

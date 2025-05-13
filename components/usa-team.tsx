@@ -15,6 +15,11 @@ export function UsaTeamSection({ id }: { id?: string }) {
       description: "Chief Information & Quality Officer J. Board, Advisory Strategic Visionary | QEF Top Talent | Promoting Excellence & Driving Growth | QEF President, ISF, USA",
       image: "/speakers/sri_atluri.jpg",
     },
+{
+      name: "Padma Alluri",
+      description: "Entrepreneur, Impact Leader – Youth, Women & Innovation (CEO, ITS Corp – USA)",
+      image: "/isf-team/padma_alluri.jpg",
+    },
     {
       name: "Krishna Kumar",
       description: "Technologist, Innovator, Investor",
@@ -24,11 +29,6 @@ export function UsaTeamSection({ id }: { id?: string }) {
       name: "Prasad Gundumogula",
       description: "Founder & CEO, Mondel Holdings Inc",
       image: "/speakers/PrasadGundumogula.jpg",
-    },
-    {
-      name: "Padma Alluri",
-      description: "Entrepreneur, Impact Leader – Youth, Women & Innovation (CEO, ITS Corp – USA)",
-      image: "/isf-team/padma_alluri.jpg",
     },
     {
       name: "Mahesh Nandyala",

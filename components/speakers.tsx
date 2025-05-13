@@ -227,7 +227,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "Founder CEO",
     "company": "AI Driven Quant Fund",
     "image": "/speakers/ram_pratti.jpg",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/rampratti/",
     "featured": false
   },
   {
@@ -235,7 +235,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "Global Head of Go-to-Market & Business Development",
     "company": "FIS Global",
     "image": "/speakers/somesh_chablani.jpg",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/someshchablani/",
     "featured": false
   },
   {
@@ -243,7 +243,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "Director User Experience",
     "company": "Informatica",
     "image": "/speakers/ranjeet_tayi.jpg",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/ranzeeth/",
     "featured": false
   },
   {
@@ -251,7 +251,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "Chief Product Officer",
     "company": "Milestone Inc",
     "image": "/speakers/sathya_krishnamurthy.jpg",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/sathyakrishnamurthy/",
     "featured": false
   },
   {
@@ -259,7 +259,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "Former EVP & Head of APAC",
     "company": "NTT Data Business Solutions",
     "image": "/speakers/sanjeev_deshpande.jpg",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/sdeshpande/?originalSubdomain=in",
     "featured": false
   },
   {
@@ -267,7 +267,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "Founder",
     "company": "RealSplit & Future Tech",
     "image": "/speakers/daniel_sloan.jpg",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/sloandaniel/",
     "featured": false
   },
   {
@@ -275,7 +275,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "Director",
     "company": "Vishwa Vidyapeeth Group of Schools",
     "image": "/speakers/suseela_santhosh.jpg",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/suseela-santhosh/?originalSubdomain=in",
     "featured": false
   },
   {
@@ -283,7 +283,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "CEO, UBU / Co-CEO",
     "company": "SingularityU South Africa / Mann Made",
     "image": "/speakers/mic_mann.png",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/mic-mann-8960692/",
     "featured": false
   },
   {
@@ -291,7 +291,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "Chief Technologist & Centre Head",
     "company": "Viswam.AI",
     "image": "/speakers/kiran_chandra.jpg",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/kiranchandray/?originalSubdomain=in",
     "featured": false
   },
   {
@@ -299,7 +299,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "Chief Data Officer & Head of Data Consulting (UK)",
     "company": "Rplus Consulting",
     "image": "/speakers/raghava_yerram.jpg",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/raghavayerra/?originalSubdomain=uk",
     "featured": false
   },
   {
@@ -307,7 +307,7 @@ export function SpeakersSection({ id }: { id?: string }) {
     "role": "Chairman and Co-Founder",
     "company": "Impact Hub Hyderabad",
     "image": "/speakers/vijay_madduri.jpg",
-    "linkedIn": "",
+    "linkedIn": "https://www.linkedin.com/in/vijay-madduri-7541891/",
     "featured": false
   }
   ];

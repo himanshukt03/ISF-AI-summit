@@ -16,6 +16,11 @@ const partnerships = [
     category: "Powered By",
     logos: [
       { src: "/logos/Mondee-Logo-1.png", alt: "Mondee logo" },
+    ],
+  },
+  {
+    category: "Powered By",
+    logos: [
       { src: "/logos/power_mech.png", alt: "Power Mech logo" },
     ],
   },
@@ -71,7 +76,7 @@ export function PartnersShowcase() {
       </div>
 
       <div className="container px-4 mx-auto relative z-10">
-        {/* New Partnerships Section */}
+        {/* Partnerships Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +94,7 @@ export function PartnersShowcase() {
             Collaborating with leading organizations to drive innovation and impact.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          <div className="flex flex-wrap justify-center gap-6 mt-8">
             {partnerships.map((partnership, index) => (
               <motion.div
                 key={index}
@@ -97,29 +102,23 @@ export function PartnersShowcase() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-card p-6 rounded-xl shadow-sm border hover:shadow-md transition-shadow"
+                className="bg-card p-4 rounded-xl shadow-sm border hover:shadow-md transition-shadow w-full sm:w-auto flex-1 min-w-[150px] max-w-[200px]"
               >
-                <h3 className="text-sm md:text-base font-semibold text-foreground mb-4 uppercase tracking-wide">
+                <h3 className="text-xs md:text-sm font-semibold text-foreground mb-3 uppercase tracking-wide text-center">
                   {partnership.category}
                 </h3>
-                <div
-                  className={`flex ${
-                    partnership.category === "Powered By"
-                      ? "flex-row gap-4 items-center justify-center"
-                      : "flex-col items-center justify-center" // Added items-center justify-center for consistency
-                  }`}
-                >
+                <div className="flex flex-col items-center justify-center">
                   {partnership.logos.map((logo, logoIndex) => (
                     <div
                       key={logoIndex}
-                      className="flex items-center justify-center h-20 w-full" // Ensure w-full for single logos too
+                      className="flex items-center justify-center h-16 w-full"
                     >
                       <Image
                         src={logo.src}
                         alt={logo.alt}
-                        width={160}
-                        height={80}
-                        className="object-contain h-full w-auto max-w-full p-2" // Adjusted for better scaling
+                        width={120}
+                        height={60}
+                        className="object-contain h-full w-auto max-w-full p-1"
                         loading="lazy"
                       />
                     </div>
@@ -152,26 +151,28 @@ export function PartnersShowcase() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {supportingOrganisations.map((org, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex justify-center items-center p-4 bg-card rounded-lg border hover:shadow-sm h-32 sm:h-36" // Added fixed height for consistency
-            >
-              <Image
-                src={org.src}
-                alt={org.alt}
-                width={160}
-                height={80}
-                className="object-contain max-h-full w-auto" // Adjusted for better scaling
-                loading="lazy"
-              />
-            </motion.div>
-          ))}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-2 w-full max-w-4xl">
+            {supportingOrganisations.map((org, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex justify-center items-center bg-card rounded-lg border border-white/100 hover:shadow-sm aspect-square max-w-[120px] sm:max-w-[140px] mx-auto"
+              >
+                <Image
+                  src={org.src}
+                  alt={org.alt}
+                  width={120}
+                  height={120}
+                  className="object-contain w-full h-full rounded-lg"
+                  loading="lazy"
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Separator */}
@@ -201,14 +202,14 @@ export function PartnersShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-card p-4 sm:p-6 rounded-lg border flex justify-center items-center hover:shadow-sm h-32 sm:h-36" // Added fixed height for consistency
+              className="bg-card p-4 sm:p-6 rounded-lg border flex justify-center items-center hover:shadow-sm h-32 sm:h-36"
             >
               <Image
                 src={partner.src}
                 alt={partner.alt}
                 width={160}
                 height={80}
-                className="object-contain max-h-full w-auto" // Adjusted for better scaling
+                className="object-contain max-h-full w-auto"
                 loading="lazy"
               />
             </motion.div>

@@ -69,11 +69,11 @@ const aiHighlights: Highlight[] = [
     description:
       "Engage in dynamic discussions with AI pioneers shaping the industry's future.",
   },
-  {
-    icon: <Brain className="w-6 h-6" />,
-    title: "Virtual Exhibition",
-    description: "Explore cutting-edge AI innovations through interactive showcases.",
-  },
+  // {
+  //   icon: <Brain className="w-6 h-6" />,
+  //   title: "Virtual Exhibition",
+  //   description: "Explore cutting-edge AI innovations through interactive showcases.",
+  // },
   {
     icon: <Users className="w-6 h-6" />,
     title: "High-Impact Networking",

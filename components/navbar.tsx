@@ -72,10 +72,22 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
                 Location
               </button>
               <button
+                onClick={() => scrollToSection("partners")}
+                className="text-gray-300 hover:text-white"
+              >
+                Partners
+              </button>
+              <button
+                onClick={() => scrollToSection("angels")}
+                className="text-gray-300 hover:text-white"
+              >
+                Idea Angels
+              </button>
+              <button
                 onClick={() => scrollToSection("about")}
                 className="text-gray-300 hover:text-white"
               >
-                About Us
+                About Junicorn100k
               </button>
               <Button variant="default" size="sm" onClick={() => setIsOpen(true)}>
                 Register Now
@@ -129,10 +141,22 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
               Location
             </button>
             <button
+              onClick={() => scrollToSection("partners")}
+              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
+            >
+              Partners
+            </button>
+            <button
+              onClick={() => scrollToSection("angels")}
+              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
+            >
+              Idea Angels
+            </button>
+            <button
               onClick={() => scrollToSection("about")}
               className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
             >
-              About Us
+              About Junicorn100k
             </button>
             <div className="px-3 py-2">
               <Button

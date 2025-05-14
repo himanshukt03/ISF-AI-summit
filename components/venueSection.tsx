@@ -144,8 +144,23 @@ export function VenueSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="mt-16 text-center"
+          className="mt-16"
         >
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+            <h3 className="text-xl font-semibold text-white mb-3">Parking Information</h3>
+            <p className="text-white/80 leading-relaxed mb-4">
+              Find details about the Pay-to-Park garage in the link below. You'll be parking at the LBJ Student Center Garage, with directions provided.
+            </p>
+            <Button
+              variant="outline"
+              size="sm"
+              className="group hover:bg-white/10 border-white/20"
+              onClick={() => window.open("https://www.parking.txst.edu/visitors.html#pay-garage", "_blank")}
+            >
+              View Parking Details
+              <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>

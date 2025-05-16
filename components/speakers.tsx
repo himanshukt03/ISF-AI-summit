@@ -151,6 +151,30 @@ export function SpeakersSection({ id }: { id?: string }) {
       featured: false,
     },
     {
+      name: "Swati Atluri",
+      role: "President & CEO, Multiple Ventures | Founder & Artistic Director, SKAA",
+      company: "Siddhendra Kuchipudi Art Academy",
+      image: "/speakers/SwatiAtluri.jpg",
+      linkedIn: "", // Add LinkedIn URL here if available
+      featured: false,
+    },
+    {
+      name: "Dr. Sara R.",
+      role: "Venture Capitalist & Next-Gen Family Office Investor",
+      company: "", // You can specify a firm or family office if known
+      image: "/speakers/SaraR.jpg",
+      linkedIn: "https://www.linkedin.com/in/sararana/",
+      featured: false,
+    },
+    {
+      name: "Robert Synak",
+      role: "Founder, General Manager & Chief Revenue Officer",
+      company: "SkillLab360",
+      image: "/speakers/RobertSynak.jpg",
+      linkedIn: "https://www.linkedin.com/in/rsynak/",
+      featured: false,
+    },
+    {
       name: "Srihari Bhat",
       role: "Founder Director",
       company: "PACE Wisdom Solutions",

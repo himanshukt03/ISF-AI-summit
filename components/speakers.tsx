@@ -24,7 +24,7 @@ export function SpeakersSection({ id }: { id?: string }) {
       company: "GoT (Government of Telangana)",
       image: "/speakers/Sridhar_Babu.jpg",
       linkedIn: "https://www.linkedin.com/in/sridharbabududdilla/",
-      featured: true,
+      featured: false,
     },
     {
       name: "Dr. JA Chowdary",
@@ -33,7 +33,7 @@ export function SpeakersSection({ id }: { id?: string }) {
       image: "/speakers/JA_chowdary.jpg",
       linkedIn:
         "https://www.linkedin.com/in/jachowdary/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in",
-      featured: true,
+      featured: false,
     },
     {
       name: "Joy Tan",
@@ -41,7 +41,7 @@ export function SpeakersSection({ id }: { id?: string }) {
       company: "Green Evolution Technologies Inc & Qurator.com",
       image: "/speakers/Joy_Tan.jpg",
       linkedIn: "https://www.linkedin.com/in/joytandallas/",
-      featured: true,
+      featured: false,
     },
     {
       name: "Sri Atluri",
@@ -49,7 +49,7 @@ export function SpeakersSection({ id }: { id?: string }) {
       company: " President, ISF, USA",
       image: "/speakers/sri_atluri.jpg",
       linkedIn: "https://www.linkedin.com/in/sriatluri9/",
-      featured: true,
+      featured: false,
     },
     {
       name: "Jay Talluri",
@@ -100,15 +100,15 @@ export function SpeakersSection({ id }: { id?: string }) {
       linkedIn: "https://www.linkedin.com/in/kiranmai-pendyala-94335427/?originalSubdomain=in",
       featured: false,
     },
-    {
-      name: "Vikrant Varshney",
-      role: "Managing Partner, Chairperson",
-      company: "SucSEED Indovation GROWTH Fund",
-      image: "/speakers/vikrant_varshney.jpeg",
-      linkedIn:
-        "https://www.linkedin.com/in/vikrantvarshney-indovation/?originalSubdomain=in",
-      featured: false,
-    },
+    // {
+    //   name: "Vikrant Varshney",
+    //   role: "Managing Partner, Chairperson",
+    //   company: "SucSEED Indovation GROWTH Fund",
+    //   image: "/speakers/vikrant_varshney.jpeg",
+    //   linkedIn:
+    //     "https://www.linkedin.com/in/vikrantvarshney-indovation/?originalSubdomain=in",
+    //   featured: false,
+    // },
     {
       name: "Sreekanth K Arimanithaya",
       role: "Entrepreneur In Residence and CHRO",
@@ -214,14 +214,14 @@ export function SpeakersSection({ id }: { id?: string }) {
       linkedIn: "https://www.linkedin.com/in/teresa-quinn/",
       featured: false,
     },
-    {
-      name: "Dr. Kancherla Ravindranath",
-      role: "Founder",
-      company: "Global Hospitals Group",
-      image: "/speakers/Dr_Kancherla.jpg",
-      linkedIn: "https://www.linkedin.com/in/ravindranath-kancherla-8bb79b25/",
-      featured: false,
-    },
+    // {
+    //   name: "Dr. Kancherla Ravindranath",
+    //   role: "Founder",
+    //   company: "Global Hospitals Group",
+    //   image: "/speakers/Dr_Kancherla.jpg",
+    //   linkedIn: "https://www.linkedin.com/in/ravindranath-kancherla-8bb79b25/",
+    //   featured: false,
+    // },
     {
       name: "Ravi Mantha",
       role: "Co-Founder & Director",

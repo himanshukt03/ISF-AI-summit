@@ -94,12 +94,12 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void
               asChild
             >
               <a
-                href="/GLOBAL%20JUNICORN%20Brochure.pdf"
+                href="/program_schedule.pdf"
                 download
-                aria-label="Download the Global Junicorn Brochure"
+                aria-label="Download the Global Junicorn Program Schedule"
               >
                 <Download className="mr-2 h-5 w-5" />
-                Brochure
+                Schedule
               </a>
             </Button>
           </motion.div>

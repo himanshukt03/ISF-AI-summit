@@ -17,7 +17,7 @@ export function JunicornTeamSection({ id }: { id?: string }) {
     },
     {
       name: "Dr. Siva Mahesh Tangutooru",
-      description: "Founder & CEO, Jamba Botanics, TurfPearl Agritech, Co-Founder, ISF",
+      description: "Founder & CEO, Jama Botanics, TurfPearl Agritech, Co-Founder, ISF",
       image: "/isf-team/shiva.a623ce07.svg",
     },
     {
@@ -27,7 +27,7 @@ export function JunicornTeamSection({ id }: { id?: string }) {
     },
     {
       name: "M. Sathyendra Kumar",
-      description: "Business Unit Head – India, Macoafee, Environmental Solutions Pvt Ltd, Co-Founder, ISF",
+      description: "Business Unit Head – India, Maccaferri Environmental Solutions Pvt Ltd, Co-Founder, ISF",
       image: "/isf-team/sathyendra_kumar.jpg",
     },
     {
@@ -37,7 +37,7 @@ export function JunicornTeamSection({ id }: { id?: string }) {
     },
     {
       name: "Dr. Varla Bhanu Prakash Reddy",
-      description: "Founder, Director, Hreem Global, Chair & Director (in-chrg), Chair & Co-Founder, ISF",
+      description: "Partner & Director Plural Technology, Chair & Director TiE Grad-Global, Co-Founder, ISF",
       image: "/isf-team/varla_bhanu.jpg",
     },
     {
@@ -74,7 +74,7 @@ export function JunicornTeamSection({ id }: { id?: string }) {
       image: "/isf-team/shahista_fatima.jpg",
     },
     {
-      name: "Raghavendra Velidandi",
+      name: "Raghavendra Velidendla",
       description: "Multimedia Specialist",
       image: "/isf-team/raghavendra_velidandi.jpg",
     },

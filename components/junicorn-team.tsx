@@ -22,7 +22,7 @@ export function JunicornTeamSection({ id }: { id?: string }) {
     },
     {
       name: "Seshadri Vangala",
-      description: "Founder and Group CEO, Global Group, 3G Global Group, Co-Founder, ISF",
+      description: "Founder and Group CEO, IFIN Global Group & SGlobal Group, Co-Founder, ISF",
       image: "/isf-team/seshadri_vangala.png",
     },
     {
@@ -41,7 +41,7 @@ export function JunicornTeamSection({ id }: { id?: string }) {
       image: "/isf-team/varla_bhanu.jpg",
     },
     {
-      name: "Bipun Chandar Penyala",
+      name: "Bipin Chandara Pendyala",
       description: "President, Penyala Group, Thinker & Doer, Program Chair, ISF",
       image: "/isf-team/bipun_chandar.jpeg",
     },
@@ -79,7 +79,7 @@ export function JunicornTeamSection({ id }: { id?: string }) {
       image: "/isf-team/raghavendra_velidandi.jpg",
     },
     {
-      name: "Rajesh Gottimukkala",
+      name: "Rajesh Gottipamula",
       description: "Documentary Filmmaker",
       image: "/isf-team/rajesh_gottimukkala.jpg",
     },

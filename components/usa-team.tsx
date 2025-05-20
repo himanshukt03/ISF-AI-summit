@@ -27,7 +27,7 @@ export function UsaTeamSection({ id }: { id?: string }) {
     },
     {
       name: "Prasad Gundumogula",
-      description: "Founder & CEO, Mondel Holdings Inc",
+      description: "Chairman, CEO & Founder, Mondee Holdings Inc",
       image: "/speakers/PrasadGundumogula.jpg",
     },
     {
@@ -42,17 +42,17 @@ export function UsaTeamSection({ id }: { id?: string }) {
     },
     {
       name: "Kishore Mellacheruvu",
-      description: "President, SSVK Tech INC",
+      description: "President & CEO, SSVK Tech INC",
       image: "/isf-team/kishore_mellacheruvu.jpg",
     },
     {
       name: "Parameswara Reddy",
-      description: "Cure – Children for Urban and Rural Education",
+      description: "Founder & Director, Cure – Children for Urban and Rural Education",
       image: "/isf-team/parameswara_reddy.jpg",
     },
     {
       name: "Santosh Kumar Yamsani",
-      description: "Head of EKS Core Committee Member at QEF",
+      description: "Head of EQE Core Engineering at BNY, Core Committee Member at QEF",
       image: "/isf-team/santosh_kumar_yamsani.png",
     },
   ]

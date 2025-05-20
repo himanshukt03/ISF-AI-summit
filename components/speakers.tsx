@@ -36,14 +36,6 @@ export function SpeakersSection({ id }: { id?: string }) {
       featured: false,
     },
     {
-      name: "Joy Tan",
-      role: "Advisor",
-      company: "Green Evolution Technologies Inc & Qurator.com",
-      image: "/speakers/Joy_Tan.jpg",
-      linkedIn: "https://www.linkedin.com/in/joytandallas/",
-      featured: false,
-    },
-    {
       name: "Sri Atluri",
       role: "Chief Information & Quality Officer | Board Member | Advisory | Strategic Visionary | Empowering Top Talent | Promoting Excellence & Driving Growth | QEF",
       company: " President, ISF, USA",
@@ -151,14 +143,6 @@ export function SpeakersSection({ id }: { id?: string }) {
       featured: false,
     },
     {
-      name: "Swati Atluri",
-      role: "President & CEO, Multiple Ventures | Founder & Artistic Director, SKAA",
-      company: "Siddhendra Kuchipudi Art Academy",
-      image: "/speakers/SwatiAtluri.jpg",
-      linkedIn: "", // Add LinkedIn URL here if available
-      featured: false,
-    },
-    {
       name: "Dr. Sara R.",
       role: "Venture Capitalist & Next-Gen Family Office Investor",
       company: "", // You can specify a firm or family office if known
@@ -214,36 +198,76 @@ export function SpeakersSection({ id }: { id?: string }) {
       linkedIn: "https://www.linkedin.com/in/teresa-quinn/",
       featured: false,
     },
-    // {
-    //   name: "Dr. Kancherla Ravindranath",
-    //   role: "Founder",
-    //   company: "Global Hospitals Group",
-    //   image: "/speakers/Dr_Kancherla.jpg",
-    //   linkedIn: "https://www.linkedin.com/in/ravindranath-kancherla-8bb79b25/",
-    //   featured: false,
-    // },
-    {
-      name: "Ravi Mantha",
-      role: "Co-Founder & Director",
-      company: "Bollant Industries",
-      image: "/speakers/RaviMantha.jpg",
-      linkedIn: "https://www.linkedin.com/in/ravimantha/?originalSubdomain=in",
-      featured: false,
-    },
-    {
-      name: "Panneerselvam (PS) Madanagopal",
-      role: "CEO",
-      company: "Meity Startup Hub - Govt of India",
-      image: "/speakers/Panneerselvam.jpg",
-      linkedIn: "https://www.linkedin.com/in/panneerselvam79/?originalSubdomain=in",
-      featured: false,
-    },
   {
     "name": "Dr. Krishnaiah Kurapati",
     "role": "CEO",
     "company": "Basavatarakam Indo-American Cancer Hospital & Research Institute",
     "image": "/speakers/krishnaiah_kurapati.jpg",
     "linkedIn": "",
+    "featured": false
+  },
+    {
+    "name": "Hari Kumar",
+    "role": "Global Business Leader",
+    "company": "Managing Director, PWC",
+    "image": "/speakers/hari_kumar.jpg",
+    "linkedIn": "https://www.linkedin.com/in/harinkumar/",
+    "featured": false
+  },
+  {
+    "name": "Rezarta Tabaku",
+    "role": "Director, Global Engineering (1LOD) Control Management",
+    "company": "BNY Mellon",
+    "image": "/speakers/rezarta_tabaku.jpg",
+    "linkedIn": "https://www.linkedin.com/in/rezarta-tabaku/",
+    "featured": false
+  },
+  {
+    "name": "Shantanu Patil",
+    "role": "Director",
+    "company": "Directorate of Entrepreneurship and Innovation, SRM University, Kattankulathur",
+    "image": "/speakers/shantanu_patil.jpg",
+    "linkedIn": "https://www.linkedin.com/in/shantanu-patil-2355122/?originalSubdomain=in",
+    "featured": false
+  },
+  {
+    "name": "Tan Moorthy",
+    "role": "CEO",
+    "company": "Revature",
+    "image": "/speakers/tan_moorthy.jpg",
+    "linkedIn": "https://www.linkedin.com/in/tanmoorthy/",
+    "featured": false
+  },
+  {
+    "name": "Kavikrut",
+    "role": "CEO",
+    "company": "T-Hub",
+    "image": "/speakers/kavikrut.jpg",
+    "linkedIn": "https://www.linkedin.com/in/kavikrut/?originalSubdomain=in",
+    "featured": false
+  },
+  {
+    "name": "Manohar Reddy",
+    "role": "Founder, CEO",
+    "company": "Feuji, Inc",
+    "image": "/speakers/manohar_reddy.jpg",
+    "linkedIn": "https://www.linkedin.com/in/emailmanohar/",
+    "featured": false
+  },
+  {
+    "name": "Mahesh Nandyala",
+    "role": "Founder and CEO",
+    "company": "Startup Runway",
+    "image": "/isf-team/mahesh_nandyala.jpg",
+    "linkedIn": "https://www.linkedin.com/in/mahesh-nandyala-6869a342/",
+    "featured": false
+  },
+  {
+    "name": "Ram Alluri",
+    "role": "Consulting CFO",
+    "company": "iSparkQ",
+    "image": "/speakers/ram_alluri.jpg",
+    "linkedIn": "https://www.linkedin.com/in/ramalluri/",
     "featured": false
   },
   {

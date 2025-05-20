@@ -42,7 +42,7 @@ export function JunicornTeamSection({ id }: { id?: string }) {
     },
     {
       name: "Bipin Chandara Pendyala",
-      description: "President, Penyala Group, Thinker & Doer, Program Chair, ISF",
+      description: "Strategist, Entrepreneur, Thinker & Doer, Program Chair, ISF",
       image: "/isf-team/bipun_chandar.jpeg",
     },
   ]

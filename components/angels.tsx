@@ -12,32 +12,32 @@ export function AngelsSection({ id }: { id?: string }) {
   const angels: Angel[] = [
     {
       name: "Jayasekhar Talluri",
-      description: "Chairman, Hallmark Group (Supported 2 companies)",
+      description: "Chairman, Hallmark Group of Companies (Supported 2 innovators)",
       image: "/speakers/Jayasekhar_Talluri.jpg",
     },
     {
       name: "Mr. Sidhartha Mohanty",
-      description: "Seasoned Serial Entrepreneur & Investor (Supported 2 companies)",
+      description: "Seasoned Serial Entrepreneur & Angel Investor (Supported 2 innovators)",
       image: "/isf-team/sid_mohanty.png",
     },
     {
       name: "Dr. Lenin Pinnamaneni MD",
-      description: "Internal Medicine, Pinewoods Diagnostic Clinic, USA (Supported 1 company)",
+      description: "Internal Medicine, Pineywoods Diagnostic Clinic, USA (Supported 1 innovator)",
       image: "/isf-team/lenin_pinnamaneni.jpg",
     },
     {
       name: "Mr. Rajesh Rangisetti",
-      description: "Eldoret Technology Private Limited (Supported 1 company)",
+      description: "Founder & CEO Elbert Technology Private Limited (Supported 1 innovator)",
       image: "/isf-team/rajesh_rangisetti.jpg",
     },
     {
       name: "Mr. Allamaprabhu Navadgere",
-      description: "Managing Director (Supported 1 company)",
+      description: "Managing Director Vachana Constructions (Supported 1 innovator)",
       image: "/isf-team/allamaprabhu_navadgere.jpg",
     },
     {
       name: "Mr. P. Chandra Seshu",
-      description: "Managing Director (Supported 1 company)",
+      description: "Managing Director, The Great Builds (Supported 1 innovator)",
       image: "/isf-team/chandra_seshu.jpg",
     },
   ]

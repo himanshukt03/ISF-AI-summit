@@ -170,7 +170,7 @@ export function SpeakersSection({ id }: { id?: string }) {
       name: "Krishna Kumar",
       role: "Technologist, Innovator, Investor",
       company: "",
-      image: "/speakers/krishna.png",
+      image: "/speakers/krishna_kumar.jpg",
       linkedIn: "https://www.linkedin.com/in/kkrishkumar/",
       featured: false,
     },

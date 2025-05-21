@@ -23,7 +23,7 @@ export function UsaTeamSection({ id }: { id?: string }) {
     {
       name: "Krishna Kumar",
       description: "Technologist, Innovator, Investor",
-      image: "/speakers/krishna.png",
+      image: "/speakers/krishna_kumar.jpg",
     },
     {
       name: "Prasad Gundumogula",

@@ -199,7 +199,7 @@ export function SpeakersSection({ id }: { id?: string }) {
       featured: false,
     },
   {
-    "name": "Dr. Krishnaiah Kurapati",
+    "name": "Dr. Kurapati Krishnaiah",
     "role": "CEO",
     "company": "Basavatarakam Indo-American Cancer Hospital & Research Institute",
     "image": "/speakers/krishnaiah_kurapati.jpg",
@@ -253,6 +253,94 @@ export function SpeakersSection({ id }: { id?: string }) {
     "image": "/speakers/manohar_reddy.jpg",
     "linkedIn": "https://www.linkedin.com/in/emailmanohar/",
     "featured": false
+  },
+    {
+    name: "Sri Sanjay Kumar",
+    role: "IAS, Special Chief Secretary, ITE&C, Industries & Commerce, and Sports Departments",
+    company: "Government of Telangana",
+    image: "/speakers/sri_sanjay_kumar.jpg",
+    linkedIn: "",
+    featured: false
+  },
+  {
+    name: "Vinai Thummalapally",
+    role: "President",
+    company: "Thummalapally LLC (earlier U.S. Ambassador to Belize)",
+    image: "/speakers/vinai_thummalapally.jpg",
+    linkedIn: "https://www.linkedin.com/in/vinai-thummalapally-89b27737/",
+    featured: false
+  },
+  {
+    name: "Ravi Tangirala",
+    role: "Vice President & Market Leader - SAIC | Former Head of MassMutual GBSI",
+    company: "SAIC",
+    image: "/speakers/ravi_tangirala.jpg",
+    linkedIn: "https://www.linkedin.com/in/ravitangirala/",
+    featured: false
+  },
+  {
+    name: "Lax Chepuri",
+    role: "Founder & CEO",
+    company: "Technogen INC",
+    image: "/speakers/lax_chepuri.jpg",
+    linkedIn: "https://www.linkedin.com/in/lax-rao-chepuri-9325362/",
+    featured: false
+  },
+  {
+    name: "Peter Voss",
+    role: "CEO, Chief Scientist, Founder",
+    company: "Aigo.ai",
+    image: "/speakers/peter_voss.jpg",
+    linkedIn: "https://www.linkedin.com/in/vosspeter/",
+    featured: false
+  },
+  {
+    name: "Andres Pelenur J.D.",
+    role: "Founding Partner, Borders Law Firm PC & Senior Policy Advisor",
+    company: "MBIE New Zealand",
+    image: "/speakers/andres_pelenur.jpg",
+    linkedIn: "https://www.linkedin.com/in/andrespelenur/",
+    featured: false
+  },
+  {
+    name: "Anupam Govil",
+    role: "Founding Chair, US India Chamber of Commerce Austin, President & Partner",
+    company: "Avasant",
+    image: "/speakers/anupam_govil.jpg",
+    linkedIn: "https://www.linkedin.com/in/anupamgovil/",
+    featured: false
+  },
+  {
+    name: "Vattem Narendra Babu",
+    role: "CEO",
+    company: "iSpatial Techno Solutions",
+    image: "/speakers/vattem_narendra_babu.jpg",
+    linkedIn: "https://www.linkedin.com/in/vnbabu/",
+    featured: false
+  },
+  {
+    name: "Dr B Chidambar",
+    role: "Trustee, Each One Educate One Foundation & Assistant Professor",
+    company: "Sri Sathya Sai University for Human Excellence",
+    image: "/speakers/dr_b_chidambar.jpg",
+    linkedIn: "https://www.linkedin.com/in/chidambar-b-635473119/",
+    featured: false
+  },
+  {
+    name: "Harshal Shah",
+    role: "Founder and CEO, The Venture Build, President",
+    company: "TiE Austin",
+    image: "/speakers/harshal_shah.jpg",
+    linkedIn: "https://www.linkedin.com/in/shahharshal/",
+    featured: false
+  },
+  {
+    name: "Usha Boddapu",
+    role: "President / Co-Founder / Chief Artificial Intelligence Scientist",
+    company: "Arytic Inc & CEO/Founder, Esolvit Inc",
+    image: "/speakers/usha_boddapu.jpg",
+    linkedIn: "https://www.linkedin.com/in/ushaboddapu/",
+    featured: false
   },
   {
     "name": "Mahesh Nandyala",

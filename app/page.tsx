@@ -19,6 +19,7 @@ import { PartnersShowcase } from "@/components/partners";
 import { AngelsSection } from "@/components/angels"; 
 import { UsaTeamSection } from "@/components/usa-team";
 import { JunicornTeamSection } from "@/components/junicorn-team";
+import { JunicornsSection } from "@/components/junicornProfile";
 
 export default function Home() {
   const router = useRouter();
@@ -53,6 +54,7 @@ export default function Home() {
               <SummitHighlights /> {/* Updated component */}
               {/* <MetaverseSection /> */}
               <Features id="key-topics" />
+              <JunicornsSection id="junicorns" />
               <SpeakersSection />
               <Schedule id="schedule" />
               <AngelsSection id="angels" />

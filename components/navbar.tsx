@@ -54,6 +54,12 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
                 Key Topics
               </button>
               <button
+                onClick={() => scrollToSection("junicorns")}
+                className="text-gray-300 hover:text-white"
+              >
+                Junicorns
+              </button>
+              <button
                 onClick={() => scrollToSection("speakers")}
                 className="text-gray-300 hover:text-white"
               >
@@ -121,6 +127,12 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
               className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
             >
               Key Topics
+            </button>
+            <button
+              onClick={() => scrollToSection("junicorns")}
+              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white"
+            >
+              Junicorns
             </button>
             <button
               onClick={() => scrollToSection("speakers")}

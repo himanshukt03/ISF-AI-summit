@@ -20,11 +20,12 @@ import { AngelsSection } from "@/components/angels";
 import { UsaTeamSection } from "@/components/usa-team";
 import { JunicornTeamSection } from "@/components/junicorn-team";
 import { JunicornsSection } from "@/components/junicornProfile";
+import { LivestreamDetails } from "@/components/livestream";
 
 export default function Home() {
   const router = useRouter();
 
-  const handleOpenRegister = () => {
+  const handleOpenRegister: () => void = () => {
     router.push("/register");
   };
 
@@ -52,7 +53,7 @@ export default function Home() {
             <div className="h-full">
               <RegisterWrapper setIsOpen={handleOpenRegister} />
               <SummitHighlights /> {/* Updated component */}
-              {/* <MetaverseSection /> */}
+              <LivestreamDetails />
               <Features id="key-topics" />
               <JunicornsSection id="junicorns" />
               <SpeakersSection />

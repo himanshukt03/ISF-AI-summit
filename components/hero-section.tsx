@@ -94,7 +94,7 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void
               asChild
             >
               <a
-                href="/program_schedule.pdf"
+                href="/program_schedule_.pdf"
                 download
                 aria-label="Download the Global Junicorn Program Schedule"
               >

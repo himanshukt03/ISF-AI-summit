@@ -95,9 +95,9 @@ export function Navbar({ className, setIsOpen }: NavbarProps) {
               >
                 About Junicorn100k
               </button>
-              <Button variant="default" size="sm" onClick={() => setIsOpen(true)}>
+              {/* <Button variant="default" size="sm" onClick={() => setIsOpen(true)}>
                 Register Now
-              </Button>
+              </Button> */}
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 // app/register/page.tsx
-import Register from "@/components/register";
+import Close from "@/components/close";
 
 export default function RegisterPage() {
-  return <Register />;
+  return <Close />;
 }

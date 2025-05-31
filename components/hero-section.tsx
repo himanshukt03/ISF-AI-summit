@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Download } from "lucide-react";
+import { Sparkles, Download } from "lucide-react";
 
-export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void }) {
+export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-start overflow-hidden px-4">
       <motion.div 
@@ -50,7 +50,7 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void
             transition={{ delay: 0.3 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white leading-tight"
           >
-            ISF Global Junicorn <br></br>&amp; AI Summit 2025
+            ISF Global Junicorn <br /> & AI Summit 2025
           </motion.h1>
 
           <motion.p
@@ -62,31 +62,12 @@ export function HeroSection({ setIsOpen }: { setIsOpen: (value: boolean) => void
             Join us for two power-packed days of action, insight, and inspiration with the world's top minds in AI, innovation, and entrepreneurship.
           </motion.p>
 
-          {/* <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-xs sm:text-sm md:text-base text-white/90 mb-6 md:mb-8 max-w-2xl"
-          >
-            Join us for two power-packed days of action, insight, and inspiration with the world's top minds in AI, innovation, and entrepreneurship.
-          </motion.p> */}
-
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5 }}
             className="flex flex-row gap-2 sm:gap-4"
           >
-            <Button
-              size="lg"
-              className="group bg-blue-600 text-white hover:bg-blue-500"
-              onClick={() => setIsOpen(true)}
-              aria-label="Register for ISF Global AI Summit 2025"
-            >
-              Register Now
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-
             <Button
               size="lg"
               variant="outline"

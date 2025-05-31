@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react"; 
 import { Navbar } from "@/components/navbar";
-import RegisterWrapper from "@/components/register-wrapper";
+// import RegisterWrapper from "@/components/register-wrapper";
 import { SummitHighlights } from "@/components/key-highlights"; // Updated import
 import { Schedule } from "@/components/schedule";
 import { Features } from "@/components/features";
@@ -21,6 +21,7 @@ import { UsaTeamSection } from "@/components/usa-team";
 import { JunicornTeamSection } from "@/components/junicorn-team";
 import { JunicornsSection } from "@/components/junicornProfile";
 import { LivestreamDetails } from "@/components/livestream";
+import { HeroSection } from "@/components/hero-section";
 
 export default function Home() {
   const router = useRouter();
@@ -51,7 +52,8 @@ export default function Home() {
 
           <div className="flex-1 overflow-y-auto">
             <div className="h-full">
-              <RegisterWrapper setIsOpen={handleOpenRegister} />
+              <HeroSection/>
+              {/* <RegisterWrapper setIsOpen={handleOpenRegister} /> */}
               <SummitHighlights /> {/* Updated component */}
               <LivestreamDetails />
               <Features id="key-topics" />

@@ -1,11 +1,11 @@
-"use client";
+// "use client";
 
-import { HeroSection } from "@/components/hero-section";
+// import { HeroSection } from "@/components/hero-section";
 
-interface RegisterWrapperProps {
-  setIsOpen: (isOpen: boolean) => void;
-}
+// interface RegisterWrapperProps {
+//   setIsOpen: (isOpen: boolean) => void;
+// }
 
-export default function RegisterWrapper({ setIsOpen }: RegisterWrapperProps) {
-  return <HeroSection setIsOpen={setIsOpen} />;
-}
+// export default function RegisterWrapper({ setIsOpen }: RegisterWrapperProps) {
+//   return <HeroSection setIsOpen={setIsOpen} />;
+// }
